@@ -1,0 +1,14 @@
+diff --git a/./libcore/luni/src/main/java/java/lang/System.java b/home/DL/gdallolio/backup/Google-4.1.1/libcore/luni/src/main/java/java/lang/System.java
+index 6603cc5..24ebf6b 100644
+--- a/./libcore/luni/src/main/java/java/lang/System.java
++++ b/home/DL/gdallolio/backup/Google-4.1.1/libcore/luni/src/main/java/java/lang/System.java
+@@ -321,9 +321,6 @@ public final class System {
+         // Undocumented Android-only properties.
+         p.put("android.icu.library.version", ICU.getIcuVersion());
+         p.put("android.icu.unicode.version", ICU.getUnicodeVersion());
+-
+-        p.put("omap.enhancement", "true");
+-
+         // TODO: it would be nice to have this but currently it causes circularity.
+         // p.put("android.tzdata.version", ZoneInfoDB.getVersion());
+         parsePropertyAssignments(p, specialProperties());

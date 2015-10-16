@@ -1,0 +1,137 @@
+diff --git a/./hardware/libhardware/hardware.c b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/hardware.c
+index c462b04..1f831cb 100644
+--- a/./hardware/libhardware/hardware.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/hardware.c
+@@ -46,9 +46,6 @@ static const char *variant_keys[] = {
+     "ro.hardware",  /* This goes first so that it can pick up a different
+                        file on the emulator. */
+     "ro.product.board",
+-#ifdef OMAP_ENHANCEMENT_MULTIGPU
+-    "ro.product.processor",
+-#endif
+     "ro.board.platform",
+     "ro.arch"
+ };
+diff --git a/./hardware/libhardware/include/hardware/audio.h b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/include/hardware/audio.h
+index f22e856..01d79b2 100644
+--- a/./hardware/libhardware/include/hardware/audio.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/include/hardware/audio.h
+@@ -115,10 +115,6 @@ __BEGIN_DECLS
+  * "sup_sampling_rates=44100|48000" */
+ #define AUDIO_PARAMETER_STREAM_SUP_SAMPLING_RATES "sup_sampling_rates"
+ 
+-#ifdef OMAP_ENHANCEMENT
+-#define AUDIO_PARAMETER_STREAM_FM_ROUTING "fm_routing"
+-#define AUDIO_PARAMETER_STREAM_FM_MUTE "fm_mute"
+-#endif
+ 
+ /**************************************/
+ 
+diff --git a/./hardware/libhardware/include/hardware/audio_policy.h b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/include/hardware/audio_policy.h
+index 2bbb9af..78a1a62 100644
+--- a/./hardware/libhardware/include/hardware/audio_policy.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/include/hardware/audio_policy.h
+@@ -394,9 +394,6 @@ struct audio_policy_service_ops {
+                                     audio_format_t *pFormat,
+                                     audio_channel_mask_t *pChannelMask);
+ 
+-#ifdef OMAP_ENHANCEMENT
+-    int (*set_FMRxActive)(void *service, bool state);
+-#endif
+ };
+ 
+ /**********************************************************************/
+diff --git a/./hardware/libhardware/include/hardware/camera.h b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/include/hardware/camera.h
+index 5dd7e03..b7182f8 100644
+--- a/./hardware/libhardware/include/hardware/camera.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/hardware/libhardware/include/hardware/camera.h
+@@ -92,29 +92,6 @@ typedef struct preview_stream_ops {
+     int (*set_timestamp)(struct preview_stream_ops *w, int64_t timestamp);
+ } preview_stream_ops_t;
+ 
+-#ifdef OMAP_ENHANCEMENT
+-/** Use below structure to extend operations to ANativeWindow/SurfaceTexture from CameraHAL */
+-typedef struct preview_stream_extended_ops {
+-
+-/** CPCAM specific extensions */
+-#ifdef OMAP_ENHANCEMENT_CPCAM
+-    /** tap in functions */
+-    int (*update_and_get_buffer)(struct preview_stream_ops* w,
+-            buffer_handle_t** buffer, int *stride);
+-    int (*get_buffer_dimension)(struct preview_stream_ops *w, int *width, int *height);
+-    int (*get_buffer_format)(struct preview_stream_ops *w, int *format);
+-
+-    /**
+-     * The data is a shared memory created with camera_request_memory().
+-     * The contents is a populated instance of camera_metadata_t applicable
+-     * for next queued frame.
+-     */
+-    int (*set_metadata)(struct preview_stream_ops *w, const camera_memory_t *data);
+-#endif
+-
+-} preview_stream_extended_ops_t;
+-#endif
+-
+ struct camera_device;
+ typedef struct camera_device_ops {
+     /** Set the ANativeWindow to which preview frames are sent */
+@@ -302,59 +279,6 @@ typedef struct camera_device_ops {
+     int (*dump)(struct camera_device *, int fd);
+ } camera_device_ops_t;
+ 
+-#ifdef OMAP_ENHANCEMENT
+-/**
+- * camera_device_extended_ops_t struct is intended to be used as extension to
+- * standard camera_device_ops_t. Adding new callbacks directly to
+- * camera_device_ops_t breaks binary compatibility with HAL. Instead, enhanced
+- * CameraService should call send_command(CAMERA_CMD_SETUP_EXTENDED_OPERATIONS)
+- * passing the pointer to camera_device_extended_ops instance that HAL should
+- * either populate or ignore.
+- */
+-typedef struct camera_device_extended_ops {
+-#ifdef OMAP_ENHANCEMENT_CPCAM
+-    /**
+-      * Set the buffer sources for a pipeline that can have
+-      * either a tapin and/or tapout point.
+-      */
+-    int (*set_buffer_source)(struct camera_device *,
+-            struct preview_stream_ops *tapin,
+-            struct preview_stream_ops *tapout);
+-
+-    /**
+-     * Take a picture with parameters.
+-     */
+-    int (*take_picture_with_parameters)(struct camera_device *,
+-            const char *parameters);
+-
+-    /** start a reprocessing operation */
+-    int (*reprocess)(struct camera_device *, const char *params);
+-
+-    /** cancels current reprocessing operation */
+-    int (*cancel_reprocess)(struct camera_device *);
+-#endif
+-
+-    /** Set extended preview operations on window/surface texture */
+-    int (*set_extended_preview_ops)(struct camera_device *, preview_stream_extended_ops_t *ops);
+-
+-} camera_device_extended_ops_t;
+-
+-/**
+- * Helpers to allow passing pointer to send_command callback by converting its
+- * low and high parts into arg1 and arg2 ints.
+- */
+-inline void* camera_cmd_send_command_args_to_pointer(int32_t arg1, int32_t arg2)
+-{
+-    return (void*)(((int64_t)arg2 << 32) | (int64_t)arg1);
+-}
+-
+-inline void camera_cmd_send_command_pointer_to_args(const void* p, int32_t* arg1, int32_t* arg2)
+-{
+-    *arg1 = (int32_t)((int64_t)p & 0xffffffff);
+-    *arg2 = (int32_t)((int64_t)p >> 32);
+-}
+-#endif
+-
+ typedef struct camera_device {
+     /**
+      * camera_device.common.version must be in the range

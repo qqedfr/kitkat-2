@@ -1,0 +1,173 @@
+diff --git a/./packages/apps/Settings/src/com/android/settings/deviceinfo/Memory.java b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Settings/src/com/android/settings/deviceinfo/Memory.java
+index ffb98d6..cb344bf 100644
+--- a/./packages/apps/Settings/src/com/android/settings/deviceinfo/Memory.java
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Settings/src/com/android/settings/deviceinfo/Memory.java
+@@ -29,7 +29,6 @@ import android.os.Environment;
+ import android.os.IBinder;
+ import android.os.RemoteException;
+ import android.os.ServiceManager;
+-import android.os.SystemProperties;
+ import android.os.storage.IMountService;
+ import android.os.storage.StorageEventListener;
+ import android.os.storage.StorageManager;
+@@ -137,10 +136,6 @@ public class Memory extends SettingsPreferenceFragment {
+                 StorageVolumePreferenceCategory svpc = mStorageVolumePreferenceCategories[i];
+                 if (path.equals(svpc.getStorageVolume().getPath())) {
+                     svpc.onStorageStateChanged();
+-                    if (SystemProperties.OMAP_ENHANCEMENT && svpc.isUnmountInProgress() &&
+-                            Environment.MEDIA_UNMOUNTED.equals(newState)) {
+-                        svpc.setUnmountInProgress(false);
+-                    }
+                     break;
+                 }
+             }
+@@ -228,9 +223,6 @@ public class Memory extends SettingsPreferenceFragment {
+                 String state = mStorageManager.getVolumeState(storageVolume.getPath());
+                 if (Environment.MEDIA_MOUNTED.equals(state) ||
+                         Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+-                    if (SystemProperties.OMAP_ENHANCEMENT) {
+-                        svpc.setUnmountInProgress(true);
+-                    }
+                     unmount();
+                 } else {
+                     mount();
+diff --git a/./packages/apps/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java
+index d5a2703..0211c77 100644
+--- a/./packages/apps/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java
+@@ -29,7 +29,6 @@ import android.os.Environment;
+ import android.os.Handler;
+ import android.os.Message;
+ import android.os.RemoteException;
+-import android.os.SystemProperties;
+ import android.os.storage.StorageManager;
+ import android.os.storage.StorageVolume;
+ import android.preference.Preference;
+@@ -70,23 +69,6 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory implemen
+ 
+     private boolean mAllowFormat;
+ 
+-    /**
+-     * Flag which prevent to enable mount toggle during slow unmount.
+-     * When external SD card contain many media files,  unmount procedure is slow,
+-     * up to 10-15 seconds. During this time, widget will update 2-3 times that
+-     * leads to invalid state of mount/unmount toggle. The solution is to set this
+-     * flag that prevent of updating toggle title and state.
+-     */
+-    private boolean mUnmountInProgress;
+-
+-    public boolean isUnmountInProgress() {
+-        return mUnmountInProgress;
+-    }
+-
+-    public void setUnmountInProgress(boolean value) {
+-        mUnmountInProgress = value;
+-    }
+-
+     static class CategoryInfo {
+         final int mTitle;
+         final int mColor;
+@@ -227,10 +209,6 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory implemen
+             mFormatPreference.setSummary(R.string.sd_format_summary);
+         }
+ 
+-        if (SystemProperties.OMAP_ENHANCEMENT) {
+-            mUnmountInProgress = false;
+-        }
+-
+         final IPackageManager pm = ActivityThread.getPackageManager();
+         try {
+             if (pm.isStorageLow()) {
+@@ -276,11 +254,7 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory implemen
+             addPreference(mFormatPreference);
+         }
+ 
+-        if (SystemProperties.OMAP_ENHANCEMENT && !mUnmountInProgress) {
+-            mMountTogglePreference.setEnabled(true);
+-        } else {
+-            mMountTogglePreference.setEnabled(true);
+-        }
++        mMountTogglePreference.setEnabled(true);
+     }
+ 
+     private void updatePreferencesFromState() {
+@@ -306,61 +280,29 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory implemen
+             removePreference(mMountTogglePreference);
+         }
+ 
+-        if (SystemProperties.OMAP_ENHANCEMENT) {
+-            if (Environment.MEDIA_MOUNTED.equals(state)) {
+-                mPreferences[AVAILABLE].setSummary(mPreferences[AVAILABLE].getSummary() + readOnly);
+-                if (!mUnmountInProgress) {
+-                    mMountTogglePreference.setEnabled(true);
+-                    mMountTogglePreference.setTitle(mResources.getString(R.string.sd_eject));
+-                    mMountTogglePreference.setSummary(mResources.getString(R.string.sd_eject_summary));
+-                }
+-            } else {
+-                if (Environment.MEDIA_UNMOUNTED.equals(state) || Environment.MEDIA_NOFS.equals(state)
+-                        || Environment.MEDIA_UNMOUNTABLE.equals(state)) {
+-                    if (!mUnmountInProgress) {
+-                        mMountTogglePreference.setEnabled(true);
+-                        mMountTogglePreference.setTitle(mResources.getString(R.string.sd_mount));
+-                        mMountTogglePreference.setSummary(mResources.getString(R.string.sd_mount_summary));
+-                    }
+-                } else {
+-                    if (!mUnmountInProgress) {
+-                        mMountTogglePreference.setEnabled(false);
+-                        mMountTogglePreference.setTitle(mResources.getString(R.string.sd_mount));
+-                        mMountTogglePreference.setSummary(mResources.getString(R.string.sd_insert_summary));
+-                    }
+-                }
++        if (Environment.MEDIA_MOUNTED.equals(state)) {
++            mPreferences[AVAILABLE].setSummary(mPreferences[AVAILABLE].getSummary() + readOnly);
+ 
+-                removePreference(mUsageBarPreference);
+-                removePreference(mPreferences[TOTAL_SIZE]);
+-                removePreference(mPreferences[AVAILABLE]);
+-                if (mFormatPreference != null) {
+-                    removePreference(mFormatPreference);
+-                }
+-            }
++            mMountTogglePreference.setEnabled(true);
++            mMountTogglePreference.setTitle(mResources.getString(R.string.sd_eject));
++            mMountTogglePreference.setSummary(mResources.getString(R.string.sd_eject_summary));
+         } else {
+-            if (Environment.MEDIA_MOUNTED.equals(state)) {
+-                mPreferences[AVAILABLE].setSummary(mPreferences[AVAILABLE].getSummary() + readOnly);
++            if (Environment.MEDIA_UNMOUNTED.equals(state) || Environment.MEDIA_NOFS.equals(state)
++                    || Environment.MEDIA_UNMOUNTABLE.equals(state)) {
+                 mMountTogglePreference.setEnabled(true);
+-                mMountTogglePreference.setTitle(mResources.getString(R.string.sd_eject));
+-                mMountTogglePreference.setSummary(mResources.getString(R.string.sd_eject_summary));
++                mMountTogglePreference.setTitle(mResources.getString(R.string.sd_mount));
++                mMountTogglePreference.setSummary(mResources.getString(R.string.sd_mount_summary));
+             } else {
+-                if (Environment.MEDIA_UNMOUNTED.equals(state) || Environment.MEDIA_NOFS.equals(state)
+-                        || Environment.MEDIA_UNMOUNTABLE.equals(state)) {
+-                    mMountTogglePreference.setEnabled(true);
+-                    mMountTogglePreference.setTitle(mResources.getString(R.string.sd_mount));
+-                    mMountTogglePreference.setSummary(mResources.getString(R.string.sd_mount_summary));
+-                } else {
+-                    mMountTogglePreference.setEnabled(false);
+-                    mMountTogglePreference.setTitle(mResources.getString(R.string.sd_mount));
+-                    mMountTogglePreference.setSummary(mResources.getString(R.string.sd_insert_summary));
+-                }
++                mMountTogglePreference.setEnabled(false);
++                mMountTogglePreference.setTitle(mResources.getString(R.string.sd_mount));
++                mMountTogglePreference.setSummary(mResources.getString(R.string.sd_insert_summary));
++            }
+ 
+-                removePreference(mUsageBarPreference);
+-                removePreference(mPreferences[TOTAL_SIZE]);
+-                removePreference(mPreferences[AVAILABLE]);
+-                if (mFormatPreference != null) {
+-                    removePreference(mFormatPreference);
+-                }
++            removePreference(mUsageBarPreference);
++            removePreference(mPreferences[TOTAL_SIZE]);
++            removePreference(mPreferences[AVAILABLE]);
++            if (mFormatPreference != null) {
++                removePreference(mFormatPreference);
+             }
+         }
+     }

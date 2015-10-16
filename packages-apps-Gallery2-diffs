@@ -1,0 +1,512 @@
+diff --git a/./packages/apps/Gallery2/AndroidManifest.xml b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/AndroidManifest.xml
+index 7aa5f58..2a69ce1 100644
+--- a/./packages/apps/Gallery2/AndroidManifest.xml
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/AndroidManifest.xml
+@@ -26,7 +26,6 @@
+     <uses-permission android:name="android.permission.VIBRATE" />
+     <uses-permission android:name="android.permission.WAKE_LOCK" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+-    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+ 
+@@ -38,8 +37,7 @@
+             android:name="com.android.gallery3d.app.GalleryAppImpl"
+             android:theme="@style/Theme.Gallery"
+             android:logo="@mipmap/ic_launcher_gallery"
+-            android:hardwareAccelerated="true"
+-            android:largeHeap="@bool/config_largeHeap">
++            android:hardwareAccelerated="true">
+         <uses-library android:name="com.google.android.media.effects" android:required="false" />
+         <activity android:name="com.android.gallery3d.app.MovieActivity"
+                 android:label="@string/movie_view_label"
+@@ -66,9 +64,6 @@
+                 <data android:mimeType="video/webm" />
+                 <data android:mimeType="video/avi" />
+                 <data android:mimeType="application/sdp" />
+-                <data android:mimeType="video/x-ms-wmv" />
+-                <data android:mimeType="video/x-msvideo" />
+-                <data android:mimeType="video/mpeg" />
+              </intent-filter>
+              <intent-filter>
+                 !-- HTTP live support -->
+diff --git a/./packages/apps/Gallery2/res/menu/album.xml b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/res/menu/album.xml
+index bb978f9..93abcca 100644
+--- a/./packages/apps/Gallery2/res/menu/album.xml
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/res/menu/album.xml
+@@ -14,33 +14,6 @@
+      limitations under the License.
+ -->
+ <menu xmlns:android="http://schemas.android.com/apk/res/android">
+-    <item android:id="@+id/action_advanced_options"
+-          android:title="Play All"
+-          android:showAsAction="always|withText">
+-          <menu>
+-              <item android:id="@+id/action_play_all_1"
+-                    android:title="@string/play_all_1"
+-                    android:checkable="false" />
+-              <item android:id="@+id/action_play_all_5"
+-                    android:title="@string/play_all_5"
+-                    android:checkable="false" />
+-              <item android:id="@+id/action_play_all_20"
+-                    android:title="@string/play_all_20"
+-                    android:checkable="false" />
+-              <item android:id="@+id/action_play_all_50"
+-                    android:title="@string/play_all_50"
+-                    android:checkable="false" />
+-              <item android:id="@+id/action_play_all_100"
+-                    android:title="@string/play_all_100"
+-                    android:checkable="false" />
+-              <item android:id="@+id/action_play_all_1000"
+-                    android:title="@string/play_all_1000"
+-                    android:checkable="false" />
+-              <item android:id="@+id/action_play_all_3000"
+-                    android:title="@string/play_all_3000"
+-                    android:checkable="false" />
+-          </menu>
+-    </item>
+     <item android:id="@+id/action_camera"
+             android:icon="@drawable/ic_menu_camera_holo_light"
+             android:title="@string/switch_to_camera"
+diff --git a/./packages/apps/Gallery2/res/values/bool.xml b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/res/values/bool.xml
+index 54f74c7..464842a 100644
+--- a/./packages/apps/Gallery2/res/values/bool.xml
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/res/values/bool.xml
+@@ -15,5 +15,4 @@
+ -->
+ <resources>
+     <bool name="show_action_bar_title">false</bool>
+-    <bool name="config_largeHeap">true</bool>
+-</resources>
++</resources>
+\ No newline at end of file
+diff --git a/./packages/apps/Gallery2/res/values/strings.xml b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/res/values/strings.xml
+index 3afac63..899c1e6 100644
+--- a/./packages/apps/Gallery2/res/values/strings.xml
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/res/values/strings.xml
+@@ -445,13 +445,4 @@
+ 
+     <!-- Web address for gallery help.  DO NOT TRANSLATE -->
+     <string name="help_url_gallery_main" translatable="false"></string>
+-
+-    <!-- Settings Video repeat count choices -->
+-    <string name="play_all_1">Once</string>
+-    <string name="play_all_5">5 Times</string>
+-    <string name="play_all_20">20 Times</string>
+-    <string name="play_all_50">50 Times</string>
+-    <string name="play_all_100">100 Times</string>
+-    <string name="play_all_1000">1000 Times</string>
+-    <string name="play_all_3000">3000 Times</string>
+ </resources>
+diff --git a/./packages/apps/Gallery2/src/com/android/gallery3d/app/AlbumPage.java b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/AlbumPage.java
+index 74306f2..e773691 100644
+--- a/./packages/apps/Gallery2/src/com/android/gallery3d/app/AlbumPage.java
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/AlbumPage.java
+@@ -58,7 +58,6 @@ import com.android.gallery3d.ui.SynchronizedHandler;
+ import com.android.gallery3d.util.Future;
+ import com.android.gallery3d.util.GalleryUtils;
+ import com.android.gallery3d.util.MediaSetUtils;
+-import java.util.ArrayList;
+ 
+ public class AlbumPage extends ActivityState implements GalleryActionBar.ClusterRunner,
+         SelectionManager.SelectionListener, MediaSet.SyncListener {
+@@ -81,14 +80,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
+     private static final int BIT_LOADING_RELOAD = 1;
+     private static final int BIT_LOADING_SYNC = 2;
+ 
+-    private static final int REQUEST_DO_PLAY_ALL_REPEAT_1 = 1;
+-    private static final int REQUEST_DO_PLAY_ALL_REPEAT_5 = 5;
+-    private static final int REQUEST_DO_PLAY_ALL_REPEAT_20 = 20;
+-    private static final int REQUEST_DO_PLAY_ALL_REPEAT_50 = 50;
+-    private static final int REQUEST_DO_PLAY_ALL_REPEAT_100 = 100;
+-    private static final int REQUEST_DO_PLAY_ALL_REPEAT_1000 = 1000;
+-    private static final int REQUEST_DO_PLAY_ALL_REPEAT_3000 = 3000;
+-
+     private static final float USER_DISTANCE_METER = 0.3f;
+ 
+     private boolean mIsActive = false;
+@@ -342,48 +333,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
+                 AlbumSetPage.class, REQUEST_DO_ANIMATION, data);
+     }
+ 
+-    private void doPlayAll(int repeatCnt) {
+-        if ("true".equals(System.getProperty("omap.enhancement"))) {
+-            String[] uriList;
+-            int ix=0;
+-            int VideoMediaCnt = 0;
+-            String[] titles;
+-
+-            /** By default Album adapter has a caching of 64 items,
+-            * This will limit the query of entire album without scrolling the view
+-            * Hence, the active window is adjusted to cover all the items in the album
+-            */
+-            mAlbumDataAdapter.setActiveWindow(0, mAlbumDataAdapter.size());
+-            for (int index = 0 ; index < mAlbumDataAdapter.size(); index++) {
+-                MediaItem item = mAlbumDataAdapter.get(index);
+-                if (item == null) {
+-                    Log.w(TAG, "item not ready yet, ignore the request");
+-                    continue;
+-                }
+-                if ((item.getSupportedOperations() & MediaItem.SUPPORT_PLAY) != 0) {
+-                    VideoMediaCnt++;
+-                }
+-            }
+-
+-            uriList = new String[VideoMediaCnt];
+-            titles = new String[VideoMediaCnt];
+-
+-            for (int index = 0 ; index < mAlbumDataAdapter.size(); index++) {
+-                MediaItem item = mAlbumDataAdapter.get(index);
+-                if (item == null) {
+-                    Log.w(TAG, "item not ready yet, ignore the request");
+-                    continue;
+-                }
+-                if ((item.getSupportedOperations() & MediaItem.SUPPORT_PLAY) != 0) {
+-                    uriList[ix] = item.getPlayUri().toString();
+-                    titles[ix] = item.getName();
+-                    ix++;
+-                }
+-            }
+-            PhotoPage.playVideo((Activity) mActivity, uriList, titles, repeatCnt);
+-        }
+-    }
+-
+     @Override
+     protected void onCreate(Bundle data, Bundle restoreState) {
+         mUserDistance = GalleryUtils.meterToPixel(USER_DISTANCE_METER);
+@@ -632,55 +581,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
+                 GalleryUtils.startCameraActivity((Activity) mActivity);
+                 return true;
+             }
+-            case R.id.action_play_all_1:
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    doPlayAll(REQUEST_DO_PLAY_ALL_REPEAT_1);
+-                    return true;
+-                } else {
+-                    return false;
+-                }
+-            case R.id.action_play_all_5:
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    doPlayAll(REQUEST_DO_PLAY_ALL_REPEAT_5);
+-                    return true;
+-                } else {
+-                    return false;
+-                }
+-            case R.id.action_play_all_20:
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    doPlayAll(REQUEST_DO_PLAY_ALL_REPEAT_20);
+-                    return true;
+-                } else {
+-                    return false;
+-                }
+-            case R.id.action_play_all_50:
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    doPlayAll(REQUEST_DO_PLAY_ALL_REPEAT_50);
+-                    return true;
+-                } else {
+-                    return false;
+-                }
+-            case R.id.action_play_all_100:
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    doPlayAll(REQUEST_DO_PLAY_ALL_REPEAT_100);
+-                    return true;
+-                } else {
+-                    return false;
+-                }
+-            case R.id.action_play_all_1000:
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    doPlayAll(REQUEST_DO_PLAY_ALL_REPEAT_1000);
+-                    return true;
+-                } else {
+-                    return false;
+-                }
+-            case R.id.action_play_all_3000:
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    doPlayAll(REQUEST_DO_PLAY_ALL_REPEAT_3000);
+-                    return true;
+-                } else {
+-                    return false;
+-                }
+             default:
+                 return false;
+         }
+@@ -808,20 +708,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
+         public int findIndex(int indexHint) {
+             if (mAlbumDataAdapter.isActive(indexHint)) {
+                 mIndex = indexHint;
+-
+-                if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                    // We need to handle a specific use case when several album
+-                    // items were selected / unselected (perhaps many times),
+-                    // and finally only one album item is left selected.
+-                    if (mSelectionManager.getSelectedCount() == 1) {
+-                        ArrayList<Path> selectedPaths = mSelectionManager.getSelected(false);
+-                        Path path = selectedPaths != null ? selectedPaths.get(0) : null;
+-                        if (path == null || mMediaSet == null) {
+-                            return -1;
+-                        }
+-                        mIndex = mMediaSet.getIndexOfItem(path, 0);
+-                    }
+-                }
+             } else {
+                 mIndex = mAlbumDataAdapter.getActiveStart();
+                 if (!mAlbumDataAdapter.isActive(mIndex)) {
+diff --git a/./packages/apps/Gallery2/src/com/android/gallery3d/app/MovieActivity.java b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/MovieActivity.java
+index aa456ec..78fe1ee 100644
+--- a/./packages/apps/Gallery2/src/com/android/gallery3d/app/MovieActivity.java
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/MovieActivity.java
+@@ -58,9 +58,6 @@ public class MovieActivity extends Activity {
+     private boolean mFinishOnCompletion;
+     private Uri mUri;
+     private boolean mTreatUpAsBack;
+-    private int mRepeatCnt = 0;
+-    private String[] mUriArray;
+-    private String[] mTitles;
+ 
+     @Override
+     public void onCreate(Bundle savedInstanceState) {
+@@ -79,38 +76,15 @@ public class MovieActivity extends Activity {
+         mFinishOnCompletion = intent.getBooleanExtra(
+                 MediaStore.EXTRA_FINISH_ON_COMPLETION, true);
+         mTreatUpAsBack = intent.getBooleanExtra(KEY_TREAT_UP_AS_BACK, false);
+-
+-        if ("true".equals(System.getProperty("omap.enhancement"))) {
+-            Bundle extras = getIntent().getExtras();
+-            if (extras != null) {
+-                mRepeatCnt = extras.getInt("RepeatCnt");
+-                if (mRepeatCnt > 0) {
+-                    mUriArray = extras.getStringArray("UriArray");
+-                    mTitles = extras.getStringArray("TitlesArray");
++        mPlayer = new MoviePlayer(rootView, this, intent.getData(), savedInstanceState,
++                !mFinishOnCompletion) {
++            @Override
++            public void onCompletion() {
++                if (mFinishOnCompletion) {
++                    finish();
+                 }
+             }
+-        }
+-        if ("true".equals(System.getProperty("omap.enhancement")) && mRepeatCnt > 0) {
+-            mPlayer = new MoviePlayer(rootView, this, savedInstanceState,
+-                              !mFinishOnCompletion, mUriArray, mTitles, mRepeatCnt) {
+-                @Override
+-                public void onCompletion() {
+-                    if (mFinishOnCompletion) {
+-                        finish();
+-                    }
+-                 }
+-            };
+-        } else {
+-          mPlayer = new MoviePlayer(rootView, this, intent.getData(), savedInstanceState,
+-                  !mFinishOnCompletion) {
+-              @Override
+-              public void onCompletion() {
+-                  if (mFinishOnCompletion) {
+-                      finish();
+-                  }
+-              }
+-          };
+-        }
++        };
+         if (intent.hasExtra(MediaStore.EXTRA_SCREEN_ORIENTATION)) {
+             int orientation = intent.getIntExtra(
+                     MediaStore.EXTRA_SCREEN_ORIENTATION,
+diff --git a/./packages/apps/Gallery2/src/com/android/gallery3d/app/MoviePlayer.java b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/MoviePlayer.java
+index a8004ce..11b40bd 100644
+--- a/./packages/apps/Gallery2/src/com/android/gallery3d/app/MoviePlayer.java
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/MoviePlayer.java
+@@ -80,14 +80,6 @@ public class MoviePlayer implements
+     private boolean mHasPaused = false;
+     private int mLastSystemUiVis = 0;
+ 
+-    private Uri[] mVideoUris;
+-    private String[] mVideoUriStrings;
+-    private String[] mTitles;
+-    private int mCurrentUriIx = 0;
+-    private int mCurrentIteration = 0;
+-    private int UriArrayLength = 0;
+-    private int mRepeatCnt = 0;
+-
+     // If the time bar is being dragged.
+     private boolean mDragging;
+ 
+@@ -198,9 +190,6 @@ public class MoviePlayer implements
+         if (savedInstance != null) { // this is a resumed activity
+             mVideoPosition = savedInstance.getInt(KEY_VIDEO_POSITION, 0);
+             mResumeableTime = savedInstance.getLong(KEY_RESUMEABLE_TIME, Long.MAX_VALUE);
+-            if ("true".equals(System.getProperty("omap.enhancement"))) {
+-                 mController.showPlaying();
+-            }
+             mVideoView.start();
+             mVideoView.suspend();
+             mHasPaused = true;
+@@ -213,117 +202,6 @@ public class MoviePlayer implements
+             }
+         }
+     }
+-    public MoviePlayer(View rootView, final MovieActivity movieActivity,
+-        Bundle savedInstance, boolean canReplay, String[] videoUri, String[] titles, int repeatCnt) {
+-        if ("true".equals(System.getProperty("omap.enhancement"))) {
+-            mContext = movieActivity.getApplicationContext();
+-            mRootView = rootView;
+-            mVideoView = (VideoView) rootView.findViewById(R.id.surface_view);
+-            mBookmarker = new Bookmarker(movieActivity);
+-
+-            mVideoUriStrings = videoUri;
+-            UriArrayLength = videoUri.length;
+-            mVideoUris = new Uri[UriArrayLength];
+-            mTitles = titles;
+-
+-            mUri = Uri.parse(mVideoUriStrings[mCurrentUriIx]);
+-            mVideoUris[mCurrentUriIx] = mUri;
+-            mRepeatCnt = repeatCnt;
+-
+-            mController = new MovieControllerOverlay(mContext);
+-            ((ViewGroup)rootView).addView(mController.getView());
+-            mController.setListener(this);
+-            mController.setCanReplay(canReplay);
+-
+-            mVideoView.setOnErrorListener(this);
+-            mVideoView.setOnCompletionListener(this);
+-
+-            mVideoView.setVideoURI(mUri);
+-            mVideoView.setOnTouchListener(new View.OnTouchListener() {
+-                @Override
+-                public boolean onTouch(View v, MotionEvent event) {
+-                    mController.show();
+-                    return true;
+-                }
+-            });
+-
+-            // The SurfaceView is transparent before drawing the first frame.
+-            // This makes the UI flashing when open a video. (black -> old screen
+-            // -> video) However, we have no way to know the timing of the first
+-            // frame. So, we hide the VideoView for a while to make sure the
+-            // video has been drawn on it.
+-            mVideoView.postDelayed(new Runnable() {
+-                @Override
+-                public void run() {
+-                    mVideoView.setVisibility(View.VISIBLE);
+-                }
+-            }, BLACK_TIMEOUT);
+-
+-            // When the user touches the screen or uses some hard key, the framework
+-            // will change system ui visibility from invisible to visible. We show
+-            // the media control at this point.
+-            mVideoView.setOnSystemUiVisibilityChangeListener(
+-                    new View.OnSystemUiVisibilityChangeListener() {
+-                @Override
+-                public void onSystemUiVisibilityChange(int visibility) {
+-                    int diff = mLastSystemUiVis ^ visibility;
+-                    mLastSystemUiVis = visibility;
+-                    if ((diff & View.SYSTEM_UI_FLAG_HIDE_NAVIGATION) != 0 &&
+-                          (visibility & View.SYSTEM_UI_FLAG_HIDE_NAVIGATION) == 0) {
+-                        mController.show();
+-                        // We need to set the background to clear ghosting images
+-                        // when ActionBar slides in. However, if we keep the background,
+-                        // there will be one additional layer in HW composer, which is bad
+-                        // to battery. As a solution, we remove the background when we
+-                        // hide the action bar
+-                        mHandler.removeCallbacks(mRemoveBackground);
+-                        mRootView.setBackgroundColor(Color.BLACK);
+-                    } else {
+-                        mHandler.removeCallbacks(mRemoveBackground);
+-
+-                        // Wait for the slide out animation, one second should be enough
+-                        mHandler.postDelayed(mRemoveBackground, 1000);
+-                    }
+-                }
+-            });
+-
+-            // Hide system UI by default
+-            showSystemUi(false);
+-
+-            mAudioBecomingNoisyReceiver = new AudioBecomingNoisyReceiver();
+-            mAudioBecomingNoisyReceiver.register();
+-
+-            Intent i = new Intent(SERVICECMD);
+-            i.putExtra(CMDNAME, CMDPAUSE);
+-            movieActivity.sendBroadcast(i);
+-
+-            if (savedInstance != null) { // this is a resumed activity
+-                mVideoPosition = savedInstance.getInt(KEY_VIDEO_POSITION, 0);
+-                mResumeableTime = savedInstance.getLong(KEY_RESUMEABLE_TIME, Long.MAX_VALUE);
+-                mController.showPlaying();
+-
+-                mVideoView.start();
+-                mVideoView.suspend();
+-                mHasPaused = true;
+-            } else {
+-                final Integer bookmark = mBookmarker.getBookmark(mUri);
+-                if (bookmark != null) {
+-                    showResumeDialog(movieActivity, bookmark);
+-                } else {
+-                    startVideo();
+-                }
+-            }
+-        } else {
+-            mContext = null;
+-            mRootView = rootView;
+-            mVideoView = null;
+-            mBookmarker = null;
+-            mUri = null;
+-            mAudioBecomingNoisyReceiver = null;
+-            mController = null;
+-            return;
+-        }
+-    }
+ 
+     private void showSystemUi(boolean visible) {
+         int flag = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+@@ -452,22 +330,7 @@ public class MoviePlayer implements
+     @Override
+     public void onCompletion(MediaPlayer mp) {
+         mController.showEnded();
+-        if ("true".equals(System.getProperty("omap.enhancement")) && mRepeatCnt > 0) {
+-            mCurrentUriIx++;
+-            if (mCurrentUriIx >= UriArrayLength) {
+-                mCurrentUriIx = 0;
+-                mCurrentIteration++;
+-            }
+-            if (mCurrentIteration >= mRepeatCnt) {
+-                onCompletion();
+-            }
+-            String title = mTitles[mCurrentUriIx];
+-            mVideoUris[mCurrentUriIx] = Uri.parse(mVideoUriStrings[mCurrentUriIx]);
+-            mVideoView.setVideoURI(mVideoUris[mCurrentUriIx]);
+-            startVideo();
+-        } else {
+-            onCompletion();
+-        }
++        onCompletion();
+     }
+ 
+     public void onCompletion() {
+diff --git a/./packages/apps/Gallery2/src/com/android/gallery3d/app/PhotoPage.java b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/PhotoPage.java
+index 605dd4c..17f57c2 100644
+--- a/./packages/apps/Gallery2/src/com/android/gallery3d/app/PhotoPage.java
++++ b/home/DL/gdallolio/backup/Google-4.1.1/packages/apps/Gallery2/src/com/android/gallery3d/app/PhotoPage.java
+@@ -762,23 +762,6 @@ public class PhotoPage extends ActivityState implements
+         }
+     }
+ 
+-    public static void playVideo(Activity activity, String[] arrayuri, String[] titles, int repeatCnt) {
+-        if ("true".equals(System.getProperty("omap.enhancement"))) {
+-            try {
+-                Intent intent = new Intent(Intent.ACTION_VIEW)
+-                            .setDataAndType(Uri.parse(arrayuri[0]), "video/*");
+-                intent.putExtra(Intent.EXTRA_TITLE, titles[0]);
+-                intent.putExtra("UriArray", arrayuri);
+-                intent.putExtra("TitlesArray", titles);
+-                intent.putExtra("RepeatCnt", repeatCnt);
+-                activity.startActivity(intent);
+-                } catch (ActivityNotFoundException e) {
+-                    Toast.makeText(activity, activity.getString(R.string.video_err),
+-                        Toast.LENGTH_SHORT).show();
+-                }
+-        }
+-    }
+-
+     private void setCurrentPhotoByIntent(Intent intent) {
+         if (intent == null) return;
+         Path path = mApplication.getDataManager()

@@ -1,0 +1,1249 @@
+diff --git a/./system/core/adb/Android.mk b/home/DL/gdallolio/backup/Google-4.1.1/system/core/adb/Android.mk
+index 44d71fc..1a25106 100644
+--- a/./system/core/adb/Android.mk
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/adb/Android.mk
+@@ -17,7 +17,6 @@ ifeq ($(HOST_OS),linux)
+   USB_SRCS := usb_linux.c
+   EXTRA_SRCS := get_my_path_linux.c
+   LOCAL_LDLIBS += -lrt -lncurses -lpthread
+-  LOCAL_C_INCLUDES += bionic/libc/kernel/common
+ endif
+ 
+ ifeq ($(HOST_OS),darwin)
+diff --git a/./system/core/adb/framebuffer_service.c b/home/DL/gdallolio/backup/Google-4.1.1/system/core/adb/framebuffer_service.c
+index e6bc850..862dd91 100644
+--- a/./system/core/adb/framebuffer_service.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/adb/framebuffer_service.c
+@@ -20,12 +20,6 @@
+ #include <string.h>
+ #include <fcntl.h>
+ 
+-#ifdef OMAP_ENHANCEMENT
+-#include <errno.h>
+-#include <sys/types.h>
+-#include <sys/wait.h>
+-#endif	/* OMAP_ENHANCEMENT */
+-
+ #include "fdevent.h"
+ #include "adb.h"
+ 
+@@ -175,10 +169,6 @@ void framebuffer_service(int fd, void *cookie)
+     if(writex(fd, buf, fbinfo.size % sizeof(buf))) goto done;
+ 
+ done:
+-#ifdef OMAP_ENHANCEMENT
+-    TEMP_FAILURE_RETRY(waitpid(pid, NULL, 0));
+-#endif	/* OMAP_ENHANCEMENT */
+-
+     close(fds[0]);
+     close(fds[1]);
+     close(fd);
+diff --git a/./system/core/adb/usb_linux.c b/home/DL/gdallolio/backup/Google-4.1.1/system/core/adb/usb_linux.c
+index 17c6094..4d55b74 100644
+--- a/./system/core/adb/usb_linux.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/adb/usb_linux.c
+@@ -229,25 +229,10 @@ static void find_usb_device(const char *base,
+ 
+                         DBGX("looking for bulk endpoints\n");
+                             // looks like ADB...
+-
+-#ifdef OMAP_ENHANCEMENT
+-                        // default: ep desc size for USB 2.0 ep descriptors
+-                        int ep_size = USB_DT_ENDPOINT_SIZE;
+-
+-                        // ep desc size for USB 3.0 ep descriptors
+-                        if (device->bcdUSB >= 0x300)
+-                            ep_size += USB_DT_SS_EP_COMP_SIZE;
+-
+-                        ep1 = (struct usb_endpoint_descriptor *)bufptr;
+-                        bufptr += ep_size;
+-                        ep2 = (struct usb_endpoint_descriptor *)bufptr;
+-                        bufptr += ep_size;
+-#else
+                         ep1 = (struct usb_endpoint_descriptor *)bufptr;
+                         bufptr += USB_DT_ENDPOINT_SIZE;
+                         ep2 = (struct usb_endpoint_descriptor *)bufptr;
+                         bufptr += USB_DT_ENDPOINT_SIZE;
+-#endif
+ 
+                         if (bufptr > devdesc + desclength ||
+                             ep1->bLength != USB_DT_ENDPOINT_SIZE ||
+diff --git a/./system/core/fastboot/fastboot.c b/home/DL/gdallolio/backup/Google-4.1.1/system/core/fastboot/fastboot.c
+index 1505815..848cea3 100644
+--- a/./system/core/fastboot/fastboot.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/fastboot/fastboot.c
+@@ -165,11 +165,7 @@ int match_fastboot(usb_ifc_info *info)
+        (info->dev_vendor != 0x0bb4))    // HTC
+             return -1;
+     if(info->ifc_class != 0xff) return -1;
+-
+-    if(info->ifc_subclass != 0xff)
+     if(info->ifc_subclass != 0x42) return -1;
+-
+-    if(info->ifc_protocol != 0xff)
+     if(info->ifc_protocol != 0x03) return -1;
+     // require matching serial number if a serial number is specified
+     // at the command line with the -s option.
+diff --git a/./system/core/include/ion/ion.h b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/ion/ion.h
+index 6fcbe30..cafead5 100644
+--- a/./system/core/include/ion/ion.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/ion/ion.h
+@@ -22,7 +22,6 @@
+ #define __SYS_CORE_ION_H
+ 
+ #include <linux/ion.h>
+-#include <linux/omap_ion.h>
+ 
+ __BEGIN_DECLS
+ 
+@@ -30,19 +29,11 @@ int ion_open();
+ int ion_close(int fd);
+ int ion_alloc(int fd, size_t len, size_t align, unsigned int flags,
+               struct ion_handle **handle);
+-int ion_alloc_tiler(int fd, size_t w, size_t h, int fmt, unsigned int flags,
+-		    struct ion_handle **handle, size_t *stride);
+ int ion_free(int fd, struct ion_handle *handle);
+ int ion_map(int fd, struct ion_handle *handle, size_t length, int prot,
+             int flags, off_t offset, unsigned char **ptr, int *map_fd);
+ int ion_share(int fd, struct ion_handle *handle, int *share_fd);
+ int ion_import(int fd, int share_fd, struct ion_handle **handle);
+-int ion_map_cacheable(int fd, struct ion_handle *handle, size_t length,
+-        int prot, int flags, off_t offset, unsigned char **ptr, int *map_fd);
+-int ion_flush_cached(int fd, struct ion_handle *handle, size_t length,
+-            unsigned char *ptr);
+-int ion_inval_cached(int fd, struct ion_handle *handle, size_t length,
+-            unsigned char *ptr);
+ 
+ __END_DECLS
+ 
+diff --git a/./system/core/include/private/android_filesystem_config.h b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/private/android_filesystem_config.h
+index 127fa15..6521cbe 100644
+--- a/./system/core/include/private/android_filesystem_config.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/private/android_filesystem_config.h
+@@ -63,10 +63,6 @@
+ #define AID_NFC           1027  /* nfc subsystem */
+ #define AID_SDCARD_R      1028  /* external storage read access */
+ 
+-#ifdef OMAP_ENHANCEMENT
+-#define AID_FMRADIO       1029  /* FM subsystem */
+-#endif
+-
+ #define AID_SHELL         2000  /* adb and debug shell user */
+ #define AID_CACHE         2001  /* cache access */
+ #define AID_DIAG          2002  /* access to diagnostic resources */
+@@ -118,9 +114,6 @@ static const struct android_id_info android_ids[] = {
+     { "mdnsr",     AID_MDNSR, },
+     { "nfc",       AID_NFC, },
+     { "drmrpc",    AID_DRMRPC, },
+-#ifdef OMAP_ENHANCEMENT
+-    { "fmradio",   AID_FMRADIO, },
+-#endif
+     { "shell",     AID_SHELL, },
+     { "cache",     AID_CACHE, },
+     { "diag",      AID_DIAG, },
+diff --git a/./system/core/include/system/audio.h b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/system/audio.h
+index 33674ee..3807317 100644
+--- a/./system/core/include/system/audio.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/system/audio.h
+@@ -63,9 +63,6 @@ typedef enum {
+     AUDIO_SOURCE_CAMCORDER           = 5,
+     AUDIO_SOURCE_VOICE_RECOGNITION   = 6,
+     AUDIO_SOURCE_VOICE_COMMUNICATION = 7,
+-#ifdef OMAP_ENHANCEMENT
+-    AUDIO_SOURCE_FM_RADIO_RX         = 8,
+-#endif
+ 
+     AUDIO_SOURCE_CNT,
+     AUDIO_SOURCE_MAX                 = AUDIO_SOURCE_CNT - 1,
+@@ -295,9 +292,6 @@ typedef enum {
+     AUDIO_DEVICE_OUT_DGTL_DOCK_HEADSET         = 0x1000,
+     AUDIO_DEVICE_OUT_USB_ACCESSORY             = 0x2000,
+     AUDIO_DEVICE_OUT_USB_DEVICE                = 0x4000,
+-#ifdef OMAP_ENHANCEMENT
+-    AUDIO_DEVICE_OUT_FM_RADIO_TX               = 0x20000000,
+-#endif
+     AUDIO_DEVICE_OUT_DEFAULT                   = 0x8000,
+     AUDIO_DEVICE_OUT_ALL      = (AUDIO_DEVICE_OUT_EARPIECE |
+                                  AUDIO_DEVICE_OUT_SPEAKER |
+@@ -314,9 +308,6 @@ typedef enum {
+                                  AUDIO_DEVICE_OUT_DGTL_DOCK_HEADSET |
+                                  AUDIO_DEVICE_OUT_USB_ACCESSORY |
+                                  AUDIO_DEVICE_OUT_USB_DEVICE |
+-#ifdef OMAP_ENHANCEMENT
+-                                 AUDIO_DEVICE_OUT_FM_RADIO_TX |
+-#endif
+                                  AUDIO_DEVICE_OUT_DEFAULT),
+     AUDIO_DEVICE_OUT_ALL_A2DP = (AUDIO_DEVICE_OUT_BLUETOOTH_A2DP |
+                                  AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES |
+@@ -336,10 +327,6 @@ typedef enum {
+     AUDIO_DEVICE_IN_AUX_DIGITAL           = 0x200000,
+     AUDIO_DEVICE_IN_VOICE_CALL            = 0x400000,
+     AUDIO_DEVICE_IN_BACK_MIC              = 0x800000,
+-#ifdef OMAP_ENHANCEMENT
+-    AUDIO_DEVICE_IN_USB_HEADSET           = 0x1000000,
+-    AUDIO_DEVICE_IN_FM_RADIO_RX           = 0x2000000,
+-#endif
+     AUDIO_DEVICE_IN_DEFAULT               = 0x80000000,
+ 
+     AUDIO_DEVICE_IN_ALL     = (AUDIO_DEVICE_IN_COMMUNICATION |
+@@ -350,10 +337,6 @@ typedef enum {
+                                AUDIO_DEVICE_IN_AUX_DIGITAL |
+                                AUDIO_DEVICE_IN_VOICE_CALL |
+                                AUDIO_DEVICE_IN_BACK_MIC |
+-#ifdef OMAP_ENHANCEMENT
+-                               AUDIO_DEVICE_IN_USB_HEADSET |
+-                               AUDIO_DEVICE_IN_FM_RADIO_RX |
+-#endif
+                                AUDIO_DEVICE_IN_DEFAULT),
+     AUDIO_DEVICE_IN_ALL_SCO = AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET,
+ } audio_devices_t;
+diff --git a/./system/core/include/system/camera.h b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/system/camera.h
+index 6615ac4..e4cacc5 100644
+--- a/./system/core/include/system/camera.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/system/camera.h
+@@ -88,10 +88,6 @@ enum {
+     // Notify on autofocus start and stop. This is useful in continuous
+     // autofocus - FOCUS_MODE_CONTINUOUS_VIDEO and FOCUS_MODE_CONTINUOUS_PICTURE.
+     CAMERA_MSG_FOCUS_MOVE = 0x0800,       // notifyCallback
+-#ifdef OMAP_ENHANCEMENT_BURST_CAPTURE
+-    CAMERA_MSG_COMPRESSED_BURST_IMAGE = 0x1000, // dataCallback
+-    CAMERA_MSG_RAW_BURST = 0x2000,        // dataCallback
+-#endif
+     CAMERA_MSG_ALL_MSGS = 0xFFFF
+ };
+ 
+@@ -167,30 +163,6 @@ enum {
+      * can silently finish itself or show a dialog.
+      */
+     CAMERA_CMD_PING = 9,
+-
+-#ifdef OMAP_ENHANCEMENT_VTC
+-    /**
+-     * Camera Preview deinitialization.
+-     * This is a TI enhancement for supporting tunneling during VTC.
+-     * This command causes the camera component to move from loaded to idle state.
+-     */
+-    CAMERA_CMD_PREVIEW_INITIALIZATION = 256,
+-
+-    /**
+-     * Camera Preview initialization.
+-     * This is a TI enhancement for supporting tunneling during VTC.
+-     * This command causes the camera component to move from executing to idle state.
+-     */
+-    CAMERA_CMD_PREVIEW_DEINITIALIZATION = 257,
+-#endif
+-
+-#ifdef OMAP_ENHANCEMENT
+-    /**
+-     * Extend camera_device_ops_t with extra callbacks.
+-     * The arg1 and arg2 arguments should form pointer to camera_device_extended_ops_t.
+-     */
+-    CAMERA_CMD_SETUP_EXTENDED_OPERATIONS = 1024,
+-#endif
+ };
+ 
+ /** camera fatal errors */
+@@ -287,18 +259,6 @@ typedef struct camera_frame_metadata {
+      * An array of the detected faces. The length is number_of_faces.
+      */
+     camera_face_t *faces;
+-
+-#ifdef OMAP_ENHANCEMENT_CPCAM
+-    /**
+-     * Exposure time in microseconds
+-     */
+-    int32_t exposure_time;
+-
+-    /**
+-     * Analog gain (EV * 100)
+-     */
+-    int32_t analog_gain;
+-#endif
+ } camera_frame_metadata_t;
+ 
+ __END_DECLS
+diff --git a/./system/core/include/system/window.h b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/system/window.h
+index e1a2aba..8e00bcd 100644
+--- a/./system/core/include/system/window.h
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/include/system/window.h
+@@ -249,14 +249,6 @@ enum {
+     NATIVE_WINDOW_API_DISCONNECT            = 14,   /* private */
+     NATIVE_WINDOW_SET_BUFFERS_USER_DIMENSIONS = 15, /* private */
+     NATIVE_WINDOW_SET_POST_TRANSFORM_CROP   = 16,   /* private */
+-#ifdef OMAP_ENHANCEMENT
+-    NATIVE_WINDOW_SET_BUFFERS_LAYOUT        = 254,
+-#endif
+-#ifdef OMAP_ENHANCEMENT_CPCAM
+-    NATIVE_WINDOW_UPDATE_AND_GET_CURRENT    = 255,
+-    NATIVE_WINDOW_SET_BUFFERS_METADATA      = 256,
+-    NATIVE_WINDOW_ADD_BUFFER_SLOT           = 257,
+-#endif
+ };
+ 
+ /* parameter for NATIVE_WINDOW_[API_][DIS]CONNECT */
+@@ -328,26 +320,6 @@ enum {
+  */
+ static const int64_t NATIVE_WINDOW_TIMESTAMP_AUTO = (-9223372036854775807LL-1);
+ 
+-#ifdef OMAP_ENHANCEMENT
+-/* parameter for NATIVE_WINDOW_SET_BUFFERS_LAYOUT */
+-enum {
+-    /* Buffer Layout: Progressive */
+-    NATIVE_WINDOW_BUFFERS_LAYOUT_PROGRESSIVE              = 0x00,
+-    /* Buffer Layout: Interleaveframe Top field First*/
+-    NATIVE_WINDOW_BUFFERS_LAYOUT_INTERLEAVE_TOP_FIRST    = 0x01,
+-    /* Buffer Layout: Interleaveframe Bottom field First*/
+-    NATIVE_WINDOW_BUFFERS_LAYOUT_INTERLEAVE_BOTTOM_FIRST = 0x02,
+-    /* Buffer Layout: Noninterleave Top Field First */
+-    NATIVE_WINDOW_BUFFERS_LAYOUT_TOP_FIRST               = 0x04,
+-    /* Buffer Layout: Noninterleave Bottom Field First*/
+-    NATIVE_WINDOW_BUFFERS_LAYOUT_BOTTOM_FIRST            = 0x08,
+-    /* Buffer Layout: Only Top Field */
+-    NATIVE_WINDOW_BUFFERS_LAYOUT_TOP_ONLY                = 0x10,
+-    /* Buffer Layout: Only Bottom Field*/
+-    NATIVE_WINDOW_BUFFERS_LAYOUT_BOTTOM_ONLY             = 0x20,
+-};
+-#endif
+-
+ struct ANativeWindow
+ {
+ #ifdef __cplusplus
+@@ -474,7 +446,6 @@ struct ANativeWindow
+      *     NATIVE_WINDOW_API_DISCONNECT         (private)
+      *     NATIVE_WINDOW_SET_BUFFERS_USER_DIMENSIONS (private)
+      *     NATIVE_WINDOW_SET_POST_TRANSFORM_CROP (private)
+-     *     NATIVE_WINDOW_SET_BUFFERS_LAYOUT
+      *
+      */
+ 
+@@ -709,21 +680,6 @@ static inline int native_window_set_buffers_timestamp(
+             timestamp);
+ }
+ 
+-#ifdef OMAP_ENHANCEMENT_CPCAM
+-/*
+- * native_window_set_buffers_metadata(..., void *data)
+- * frames queued after this call will be associated with this set of
+- * metadata.
+- */
+-static inline int native_window_set_buffers_metadata(
+-        struct ANativeWindow* window,
+-        void *data)
+-{
+-    return window->perform(window, NATIVE_WINDOW_SET_BUFFERS_METADATA,
+-            data);
+-}
+-#endif
+-
+ /*
+  * native_window_set_scaling_mode(..., int mode)
+  * All buffers queued after this call will be associated with the scaling mode
+@@ -737,24 +693,6 @@ static inline int native_window_set_scaling_mode(
+             mode);
+ }
+ 
+-#ifdef OMAP_ENHANCEMENT
+-/*
+- * native_window_set_buffers_layour(..., uint32 layout)
+- * Sets how the content is arranged within the buffer.eg: interlaced
+- *
+- * The specified layout is assumed to all buffers queued after it is called.
+- *
+- * if 'layout' is zero, subsequently queued buffers will be treated as progressive.
+- *
+- */
+-static inline int native_window_set_buffers_layout(
+-        struct ANativeWindow* window,
+-        uint32_t layout)
+-{
+-    return window->perform(window, NATIVE_WINDOW_SET_BUFFERS_LAYOUT, layout);
+-}
+-#endif
+-
+ /*
+  * native_window_api_connect(..., int api)
+  * connects an API to this window. only one API can be connected at a time.
+diff --git a/./system/core/init/devices.c b/home/DL/gdallolio/backup/Google-4.1.1/system/core/init/devices.c
+index 8179cfe..125f981 100644
+--- a/./system/core/init/devices.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/init/devices.c
+@@ -64,8 +64,6 @@ struct uevent {
+     const char *firmware;
+     const char *partition_name;
+     const char *device_name;
+-    const char *country;
+-    const char *modalias;
+     int partition_num;
+     int major;
+     int minor;
+@@ -334,8 +332,6 @@ static void parse_event(const char *msg, struct uevent *uevent)
+     uevent->path = "";
+     uevent->subsystem = "";
+     uevent->firmware = "";
+-    uevent->country = "";
+-    uevent->modalias = "";
+     uevent->major = -1;
+     uevent->minor = -1;
+     uevent->partition_name = NULL;
+@@ -371,12 +367,6 @@ static void parse_event(const char *msg, struct uevent *uevent)
+         } else if(!strncmp(msg, "DEVNAME=", 8)) {
+             msg += 8;
+             uevent->device_name = msg;
+-        } else if (!strncmp(msg, "COUNTRY=", 8)) {
+-            msg += 8;
+-            uevent->country = msg;
+-        } else if (!strncmp(msg, "MODALIAS=", 9)) {
+-            msg += 9;
+-            uevent->modalias = msg;
+         }
+ 
+         /* advance to after the next \0 */
+@@ -384,10 +374,9 @@ static void parse_event(const char *msg, struct uevent *uevent)
+             ;
+     }
+ 
+-    log_event_print("event { '%s', '%s', '%s', '%s', %d, %d, '%s', '%s'}\n",
++    log_event_print("event { '%s', '%s', '%s', '%s', %d, %d }\n",
+                     uevent->action, uevent->path, uevent->subsystem,
+-                    uevent->firmware, uevent->major, uevent->minor,
+-                    uevent->country, uevent->modalias);
++                    uevent->firmware, uevent->major, uevent->minor);
+ }
+ 
+ static char **get_character_device_symlinks(struct uevent *uevent)
+@@ -811,38 +800,6 @@ root_free_out:
+     free(root);
+ }
+ 
+-static void handle_crda_event(struct uevent *uevent)
+-{
+-    int status;
+-    int ret;
+-    pid_t pid;
+-    char country_env[128];
+-    char *argv[] = { "/system/bin/crda", NULL };
+-    char *envp[] = { country_env, NULL };
+-
+-    if(strcmp(uevent->subsystem, "platform"))
+-        return;
+-
+-    if(strcmp(uevent->action, "change"))
+-        return;
+-
+-    if(strcmp(uevent->modalias, "platform:regulatory"))
+-        return;
+-
+-    log_event_print("executing CRDA country=%s\n", uevent->country);
+-    sprintf(country_env, "COUNTRY=%s", uevent->country);
+-
+-    pid = fork();
+-    if (!pid) {
+-        if (-1 == execve(argv[0], argv, envp))
+-            exit(1);
+-    } else if (pid != -1) {
+-        do {
+-            ret = waitpid(pid, &status, 0);
+-        } while (ret == -1 && errno == EINTR);
+-    }
+-}
+-
+ static void handle_firmware_event(struct uevent *uevent)
+ {
+     pid_t pid;
+@@ -879,7 +836,6 @@ void handle_device_fd()
+ 
+         handle_device_event(&uevent);
+         handle_firmware_event(&uevent);
+-        handle_crda_event(&uevent);
+     }
+ }
+ 
+diff --git a/./system/core/libion/Android.mk b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libion/Android.mk
+index 23db28c..5121fee 100644
+--- a/./system/core/libion/Android.mk
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libion/Android.mk
+@@ -13,10 +13,3 @@ LOCAL_MODULE := iontest
+ LOCAL_MODULE_TAGS := optional tests
+ LOCAL_SHARED_LIBRARIES := liblog
+ include $(BUILD_EXECUTABLE)
+-
+-include $(CLEAR_VARS)
+-LOCAL_SRC_FILES := ion.c ion_test_2.c
+-LOCAL_MODULE := iontest2
+-LOCAL_MODULE_TAGS := optional tests
+-LOCAL_SHARED_LIBRARIES := liblog
+-include $(BUILD_EXECUTABLE)
+diff --git a/./system/core/libion/ion.c b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libion/ion.c
+index f575ec0..dbeac23 100644
+--- a/./system/core/libion/ion.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libion/ion.c
+@@ -47,7 +47,7 @@ static int ion_ioctl(int fd, int req, void *arg)
+ {
+         int ret = ioctl(fd, req, arg);
+         if (ret < 0) {
+-                ALOGE("ioctl %d failed with code %d: %s\n", req,
++                ALOGE("ioctl %x failed with code %d: %s\n", req,
+                        ret, strerror(errno));
+                 return -errno;
+         }
+@@ -71,32 +71,6 @@ int ion_alloc(int fd, size_t len, size_t align, unsigned int flags,
+         return ret;
+ }
+ 
+-int ion_alloc_tiler(int fd, size_t w, size_t h, int fmt, unsigned int flags,
+-            struct ion_handle **handle, size_t *stride)
+-{
+-        int ret;
+-        struct omap_ion_tiler_alloc_data alloc_data = {
+-                .w = w,
+-                .h = h,
+-                .fmt = fmt,
+-                .flags = flags,
+-                .out_align = PAGE_SIZE,
+-                .token = 0,
+-        };
+-
+-        struct ion_custom_data custom_data = {
+-                .cmd = OMAP_ION_TILER_ALLOC,
+-                .arg = (unsigned long)(&alloc_data),
+-        };
+-
+-        ret = ion_ioctl(fd, ION_IOC_CUSTOM, &custom_data);
+-        if (ret < 0)
+-                return ret;
+-        *stride = alloc_data.stride;
+-        *handle = alloc_data.handle;
+-        return ret;
+-}
+-
+ int ion_free(int fd, struct ion_handle *handle)
+ {
+         struct ion_handle_data data = {
+@@ -111,6 +85,7 @@ int ion_map(int fd, struct ion_handle *handle, size_t length, int prot,
+         struct ion_fd_data data = {
+                 .handle = handle,
+         };
++
+         int ret = ion_ioctl(fd, ION_IOC_MAP, &data);
+         if (ret < 0)
+                 return ret;
+@@ -133,12 +108,13 @@ int ion_share(int fd, struct ion_handle *handle, int *share_fd)
+         struct ion_fd_data data = {
+                 .handle = handle,
+         };
++
+         int ret = ion_ioctl(fd, ION_IOC_SHARE, &data);
+         if (ret < 0)
+                 return ret;
+         *share_fd = data.fd;
+         if (*share_fd < 0) {
+-                ALOGE("map ioctl returned negative fd\n");
++                ALOGE("share ioctl returned negative fd\n");
+                 return -EINVAL;
+         }
+         return ret;
+@@ -149,54 +125,10 @@ int ion_import(int fd, int share_fd, struct ion_handle **handle)
+         struct ion_fd_data data = {
+                 .fd = share_fd,
+         };
++
+         int ret = ion_ioctl(fd, ION_IOC_IMPORT, &data);
+         if (ret < 0)
+                 return ret;
+         *handle = data.handle;
+         return ret;
+ }
+-
+-int ion_map_cacheable(int fd, struct ion_handle *handle, size_t length, int prot,
+-            int flags, off_t offset, unsigned char **ptr, int *map_fd)
+-{
+-        struct ion_fd_data data = {
+-                .handle = handle,
+-                .cacheable = 1,
+-        };
+-        int ret = ion_ioctl(fd, ION_IOC_MAP, &data);
+-        if (ret < 0)
+-                return ret;
+-        *map_fd = data.fd;
+-        if (*map_fd < 0) {
+-                ALOGE("map ioctl returned negative fd\n");
+-                return -EINVAL;
+-        }
+-        *ptr = mmap(NULL, length, prot, flags, *map_fd, offset);
+-        if (*ptr == MAP_FAILED) {
+-                ALOGE("mmap failed: %s\n", strerror(errno));
+-                return -errno;
+-        }
+-        return ret;
+-}
+-
+-int ion_flush_cached(int fd, struct ion_handle *handle, size_t length,
+-            unsigned char *ptr)
+-{
+-        struct ion_cached_user_buf_data data = {
+-                .handle = handle,
+-                .vaddr = (unsigned long)ptr,
+-                .size = length,
+-        };
+-        return ion_ioctl(fd, ION_IOC_FLUSH_CACHED, &data);
+-}
+-
+-int ion_inval_cached(int fd, struct ion_handle *handle, size_t length,
+-            unsigned char *ptr)
+-{
+-        struct ion_cached_user_buf_data data = {
+-                .handle = handle,
+-                .vaddr = (unsigned long)ptr,
+-                .size = length,
+-        };
+-        return ion_ioctl(fd, ION_IOC_INVAL_CACHED, &data);
+-}
+diff --git a/./system/core/libion/ion_test.c b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libion/ion_test.c
+index b52e9eb..3f2d7cc 100644
+--- a/./system/core/libion/ion_test.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libion/ion_test.c
+@@ -21,8 +21,6 @@ int map_flags = MAP_SHARED;
+ int alloc_flags = 0;
+ int test = -1;
+ size_t width = 1024*1024, height = 1024*1024;
+-int fmt = TILER_PIXEL_FMT_32BIT;
+-int tiler_test = 0;
+ size_t stride;
+ 
+ int _ion_alloc_test(int *fd, struct ion_handle **handle)
+@@ -33,11 +31,7 @@ int _ion_alloc_test(int *fd, struct ion_handle **handle)
+ 	if (*fd < 0)
+ 		return *fd;
+ 
+-	if (tiler_test)
+-		ret = ion_alloc_tiler(*fd, width, height, fmt, alloc_flags,
+-					  handle, &stride);
+-	else
+-		ret = ion_alloc(*fd, len, align, alloc_flags, handle);
++	ret = ion_alloc(*fd, len, align, alloc_flags, handle);
+ 
+ 	if (ret)
+ 		printf("%s failed: %s\n", __func__, strerror(ret));
+@@ -61,25 +55,6 @@ void ion_alloc_test()
+ 	printf("ion alloc test: passed\n");
+ }
+ 
+-void _ion_tiler_map_test(unsigned char *ptr)
+-{
+-	size_t row, col;
+-
+-	for (row = 0; row < height; row++)
+-		for (col = 0; col < width; col++) {
+-			int i = (row * stride) + col;
+-			ptr[i] = (unsigned char)i;
+-		}
+-	for (row = 0; row < height; row++)
+-		for (col = 0; col < width; col++) {
+-			int i = (row * stride) + col;
+-			if (ptr[i] != (unsigned char)i)
+-				printf("%s failed wrote %d read %d from mapped "
+-					   "memory\n", __func__, i, ptr[i]);
+-		}
+-}
+-
+-
+ void ion_map_test()
+ {
+ 	int fd, map_fd, ret;
+@@ -90,23 +65,17 @@ void ion_map_test()
+ 	if(_ion_alloc_test(&fd, &handle))
+ 		return;
+ 
+-	if (tiler_test)
+-		len = height * stride;
+ 	ret = ion_map(fd, handle, len, prot, map_flags, 0, &ptr, &map_fd);
+ 	if (ret)
+ 		return;
+ 
+-	if (tiler_test)
+-		_ion_tiler_map_test(ptr);
+-	else {
+-		for (i = 0; i < len; i++) {
+-			ptr[i] = (unsigned char)i;
+-		}
+-		for (i = 0; i < len; i++)
+-			if (ptr[i] != (unsigned char)i)
+-				printf("%s failed wrote %d read %d from mapped "
+-					   "memory\n", __func__, i, ptr[i]);
++	for (i = 0; i < len; i++) {
++		ptr[i] = (unsigned char)i;
+ 	}
++	for (i = 0; i < len; i++)
++		if (ptr[i] != (unsigned char)i)
++			printf("%s failed wrote %d read %d from mapped "
++			       "memory\n", __func__, i, ptr[i]);
+ 	/* clean up properly */
+ 	ret = ion_free(fd, handle);
+ 	ion_close(fd);
+@@ -240,10 +209,8 @@ int main(int argc, char* argv[]) {
+ 			{"align", required_argument, 0, 'g'},
+ 			{"map_flags", required_argument, 0, 'z'},
+ 			{"prot", required_argument, 0, 'p'},
+-			{"alloc_tiler", no_argument, 0, 't'},
+ 			{"width", required_argument, 0, 'w'},
+ 			{"height", required_argument, 0, 'h'},
+-			{"fmt", required_argument, 0, 'r'},
+ 		};
+ 		int i = 0;
+ 		c = getopt_long(argc, argv, "af:h:l:mr:stw:", opts, &i);
+@@ -284,9 +251,6 @@ int main(int argc, char* argv[]) {
+ 		case 'm':
+ 			test = MAP_TEST;
+ 			break;
+-		case 'r':
+-			fmt = atol(optarg);
+-			break;
+ 		case 's':
+ 			test = SHARE_TEST;
+ 			break;
+@@ -296,14 +260,11 @@ int main(int argc, char* argv[]) {
+ 		case 'h':
+ 			height = atol(optarg);
+ 			break;
+-		case 't':
+-			tiler_test = 1;
+-			break;
+ 		}
+ 	}
+-	printf("test %d, len %u, width %u, height %u fmt %u align %u, "
++	printf("test %d, len %u, width %u, height %u align %u, "
+ 		   "map_flags %d, prot %d, alloc_flags %d\n", test, len, width,
+-		   height, fmt, align, map_flags, prot, alloc_flags);
++		   height, align, map_flags, prot, alloc_flags);
+ 	switch (test) {
+ 		case ALLOC_TEST:
+ 			ion_alloc_test();
+diff --git a/./system/core/libion/ion_test_2.c b/./system/core/libion/ion_test_2.c
+deleted file mode 100644
+index 9d7ae46..0000000
+--- a/./system/core/libion/ion_test_2.c
++++ /dev/null
+@@ -1,481 +0,0 @@
+-/*
+- * Copyright (C) Texas Instruments - http://www.ti.com/
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-/*
+- * Test case to test ION Memory Allocator module
+- */
+-
+-#include <errno.h>
+-#include <fcntl.h>
+-#include <getopt.h>
+-#include <string.h>
+-#include <stdlib.h>
+-#include <stdio.h>
+-#include <sys/mman.h>
+-#include <sys/ioctl.h>
+-#include <sys/socket.h>
+-#include <sys/stat.h>
+-#include <sys/types.h>
+-#include <unistd.h>
+-
+-#include <ion/ion.h>
+-#include <linux/ion.h>
+-#include <linux/omap_ion.h>
+-
+-size_t len = 1024*1024, align = 0;
+-int prot = PROT_READ | PROT_WRITE;
+-int map_flags = MAP_SHARED;
+-int alloc_flags = 0;
+-int test = -1;
+-size_t width = 1024*1024, height = 1024*1024;
+-int fmt = TILER_PIXEL_FMT_32BIT;
+-int tiler_test = 0;
+-size_t stride;
+-
+-int _ion_alloc_test(int fd, struct ion_handle **handle)
+-{
+-	int ret;
+-
+-	if (tiler_test)
+-		ret = ion_alloc_tiler(fd, width, height, fmt, alloc_flags,
+-					  handle, &stride);
+-	else
+-		ret = ion_alloc(fd, len, align, alloc_flags, handle);
+-
+-	if (ret)
+-		printf("%s() failed: %s\n", __func__, strerror(ret));
+-	return ret;
+-}
+-
+-int ion_alloc_test(int count)
+-{
+-	int fd, ret = 0, i, count_alloc;
+-	struct ion_handle **handle;
+-
+-	fd = ion_open();
+-	if (fd < 0) {
+-		printf("%s(): FAILED to open ion device\n",	__func__);
+-		return -1;
+-	}
+-
+-	handle = (struct ion_handle **)malloc(count * sizeof(struct ion_handle *));
+-	if(handle == NULL) {
+-		printf("%s() : FAILED to allocate memory for ion_handles\n", __func__);
+-		return -ENOMEM;
+-	}
+-
+-	/* Allocate ion_handles */
+-	count_alloc = count;
+-	for(i = 0; i < count; i++) {
+-		ret = _ion_alloc_test(fd, &(handle[i]));
+-		printf("%s(): Alloc handle[%d]=%p\n", __func__, i, handle[i]);
+-		if(ret || ((int)handle[i]  == -ENOMEM)) {
+-			printf("%s(): Alloc handle[%d]=%p FAILED, err:%s\n",
+-					__func__, i, handle[i], strerror(ret));
+-			count_alloc = i;
+-			goto err_alloc;
+-		}
+-	}
+-
+-	err_alloc:
+-	/* Free ion_handles */
+-	for (i = 0; i < count_alloc; i++) {
+-		printf("%s(): Free  handle[%d]=%p\n", __func__, i, handle[i]);
+-		ret = ion_free(fd, handle[i]);
+-		if (ret) {
+-			printf("%s(): Free handle[%d]=%p FAILED, err:%s\n",
+-					__func__, i, handle[i], strerror(ret));
+-		}
+-	}
+-
+-	ion_close(fd);
+-	free(handle);
+-	handle = NULL;
+-
+-	if(ret || (count_alloc != count)) {
+-		printf("\nion alloc test: FAILED\n\n");
+-		if(count_alloc != count)
+-			ret = -ENOMEM;
+-	}
+-	else
+-		printf("\nion alloc test: PASSED\n\n");
+-
+-	return ret;
+-}
+-
+-void _ion_tiler_map_test(unsigned char *ptr)
+-{
+-	size_t row, col;
+-
+-	for (row = 0; row < height; row++)
+-		for (col = 0; col < width; col++) {
+-			int i = (row * stride) + col;
+-			ptr[i] = (unsigned char)i;
+-		}
+-	for (row = 0; row < height; row++)
+-		for (col = 0; col < width; col++) {
+-			int i = (row * stride) + col;
+-			if (ptr[i] != (unsigned char)i)
+-				printf("%s(): FAILED, wrote %d read %d from mapped "
+-					   "memory\n", __func__, i, ptr[i]);
+-		}
+-}
+-
+-void _ion_map_test(unsigned char *ptr)
+-{
+-	size_t i;
+-
+-	for (i = 0; i < len; i++) {
+-		ptr[i] = (unsigned char)i;
+-	}
+-	for (i = 0; i < len; i++) {
+-		if (ptr[i] != (unsigned char)i)
+-			printf("%s(): failed wrote %d read %d from mapped "
+-				   "memory\n", __func__, i, ptr[i]);
+-	}
+-}
+-
+-int ion_map_test(int count)
+-{
+-	int fd, ret = 0, i, count_alloc, count_map;
+-	struct ion_handle **handle;
+-	unsigned char **ptr;
+-	int *map_fd;
+-
+-	fd = ion_open();
+-	if (fd < 0) {
+-		printf("%s(): FAILED to open ion device\n",	__func__);
+-		return -1;
+-	}
+-
+-	handle = (struct ion_handle **)malloc(count * sizeof(struct ion_handle *));
+-	if(handle == NULL) {
+-		printf("%s(): FAILED to allocate memory for ion_handles\n", __func__);
+-		return -ENOMEM;
+-	}
+-
+-	count_alloc = count;
+-	count_map = count;
+-
+-	/* Allocate ion_handles */
+-	for(i = 0; i < count; i++) {
+-		ret = _ion_alloc_test(fd, &(handle[i]));
+-		printf("%s(): Alloc handle[%d]=%p\n", __func__, i, handle[i]);
+-		if(ret || ((int)handle[i]  == -ENOMEM)) {
+-			printf("%s(): Alloc handle[%d]=%p FAILED, err:%s\n",
+-					__func__, i, handle[i], strerror(ret));
+-			count_alloc = i;
+-			goto err_alloc;
+-		}
+-	}
+-
+-	/* Map ion_handles and validate */
+-	if (tiler_test)
+-		len = height * stride;
+-
+-	ptr = (unsigned char **)malloc(count * sizeof(unsigned char **));
+-	map_fd = (int *)malloc(count * sizeof(int *));
+-
+-	for(i = 0; i < count; i++) {
+-		/* Map ion_handle on userside */
+-		ret = ion_map(fd, handle[i], len, prot, map_flags, 0, &(ptr[i]), &(map_fd[i]));
+-		printf("%s(): Map handle[%d]=%p, map_fd=%d, ptr=%p\n",
+-				__func__, i, handle[i], map_fd[i], ptr[i]);
+-		if(ret) {
+-			printf("%s Map handle[%d]=%p FAILED, err:%s\n",
+-					__func__, i, handle[i], strerror(ret));
+-			count_map = i;
+-			goto err_map;
+-		}
+-
+-		/* Validate mapping by writing the data and reading it back */
+-		if (tiler_test)
+-			_ion_tiler_map_test(ptr[i]);
+-		else
+-			_ion_map_test(ptr[i]);
+-	}
+-
+-	/* clean up properly */
+-	err_map:
+-	for(i = 0; i < count_map; i++) {
+-		/* Unmap ion_handles */
+-		ret = munmap(ptr[i], len);
+-		printf("%s(): Unmap handle[%d]=%p, map_fd=%d, ptr=%p\n",
+-				__func__, i, handle[i], map_fd[i], ptr[i]);
+-		if(ret) {
+-			printf("%s(): Unmap handle[%d]=%p FAILED, err:%s\n",
+-					__func__, i, handle[i], strerror(ret));
+-			goto err_map;
+-		}
+-		/* Close fds */
+-		close(map_fd[i]);
+-	}
+-	free(map_fd);
+-	free(ptr);
+-
+-	err_alloc:
+-	/* Free ion_handles */
+-	for (i = 0; i < count_alloc; i++) {
+-		printf("%s(): Free handle[%d]=%p\n", __func__, i, handle[i]);
+-		ret = ion_free(fd, handle[i]);
+-		if (ret) {
+-			printf("%s(): Free handle[%d]=%p FAILED, err:%s\n",
+-					__func__, i, handle[i], strerror(ret));
+-		}
+-	}
+-
+-	ion_close(fd);
+-	free(handle);
+-	handle = NULL;
+-
+-	if(ret || (count_alloc != count) || (count_map != count))
+-	{
+-		printf("\nion map test: FAILED\n\n");
+-		if((count_alloc != count) || (count_map != count))
+-			ret = -ENOMEM;
+-	}	else
+-		printf("\nion map test: PASSED\n");
+-
+-	return ret;
+-}
+-
+-/**
+- * Go on allocating buffers of specified size & type, untill the allocation fails.
+- * Then free 10 buffers and allocate 10 buffers again.
+- */
+-int ion_alloc_fail_alloc_test()
+-{
+-	int fd, ret = 0, i;
+-	struct ion_handle **handle;
+-	const int  COUNT_ALLOC_MAX = 200;
+-	const int  COUNT_REALLOC_MAX = 10;
+-	int count_alloc = COUNT_ALLOC_MAX, count_realloc = COUNT_ALLOC_MAX;
+-
+-	fd = ion_open();
+-	if (fd < 0) {
+-		printf("%s(): FAILED to open ion device\n", __func__);
+-		return -1;
+-	}
+-
+-	handle = (struct ion_handle **)malloc(COUNT_ALLOC_MAX * sizeof(struct ion_handle *));
+-	if(handle == NULL) {
+-		printf("%s(): FAILED to allocate memory for ion_handles\n", __func__);
+-		return -ENOMEM;
+-	}
+-
+-	/* Allocate ion_handles as much as possible */
+-	for(i = 0; i < COUNT_ALLOC_MAX; i++) {
+-		ret = _ion_alloc_test(fd, &(handle[i]));
+-		printf("%s(): Alloc handle[%d]=%p\n", __func__, i, handle[i]);
+-		if(ret || ((int)handle[i]  == -ENOMEM)) {
+-			printf("%s(): Alloc handle[%d]=%p FAILED, err:%s\n\n",
+-					__func__, i, handle[i], strerror(ret));
+-			count_alloc = i;
+-			break;
+-		}
+-	}
+-
+-	/* Free COUNT_REALLOC_MAX ion_handles */
+-	for (i = count_alloc-1; i > (count_alloc-1 - COUNT_REALLOC_MAX); i--) {
+-		printf("%s(): Free  handle[%d]=%p\n", __func__, i, handle[i]);
+-		ret = ion_free(fd, handle[i]);
+-		if (ret) {
+-			printf("%s(): Free  handle[%d]=%p FAILED, err:%s\n\n",
+-					__func__, i, handle[i], strerror(ret));
+-		}
+-	}
+-
+-	/* Again allocate COUNT_REALLOC_MAX ion_handles to test
+-	   that we are still able to allocate */
+-	for(i = (count_alloc - COUNT_REALLOC_MAX); i < count_alloc; i++) {
+-		ret = _ion_alloc_test(fd, &(handle[i]));
+-		printf("%s(): Alloc handle[%d]=%p\n", __func__, i, handle[i]);
+-		if(ret || ((int)handle[i]  == -ENOMEM)) {
+-			printf("%s(): Alloc handle[%d]=%p FAILED, err:%s\n\n",
+-					__func__, i, handle[i], strerror(ret));
+-			count_realloc = i;
+-			goto err_alloc;
+-		}
+-	}
+-	count_realloc = i;
+-
+-	err_alloc:
+-	/* Free all ion_handles */
+-	for (i = 0; i < count_alloc; i++) {
+-		printf("%s(): Free  handle[%d]=%p\n", __func__, i, handle[i]);
+-		ret = ion_free(fd, handle[i]);
+-		if (ret) {
+-			printf("%s(): Free  handle[%d]=%p FAILED, err:%s\n",
+-					__func__, i, handle[i], strerror(ret));
+-		}
+-	}
+-
+-	ion_close(fd);
+-	free(handle);
+-	handle = NULL;
+-
+-	printf("\ncount_alloc=%d, count_realloc=%d\n",count_alloc, count_realloc);
+-
+-	if(ret || (count_alloc != count_realloc)) {
+-		printf("\nion alloc->fail->alloc test: FAILED\n\n");
+-		if(count_alloc != COUNT_ALLOC_MAX)
+-			ret = -ENOMEM;
+-	}
+-	else
+-		printf("\nion alloc->fail->alloc test: PASSED\n\n");
+-
+-	return ret;
+-}
+-
+-int custom_test(int test_number)
+-{
+-	switch(test_number) {
+-		case 1 :
+-			return ion_alloc_fail_alloc_test();
+-		default :
+-			printf("%s(): Invalid custom_test_number=%d\n", __func__, test_number);
+-			return -EINVAL;
+-	}
+-}
+-
+-int main(int argc, char* argv[]) {
+-	int c, ret;
+-	unsigned int count = 1, iteration = 1, j, custom_test_num = 1;
+-	enum tests {
+-		ALLOC_TEST = 0, MAP_TEST, CUSTOM_TEST,
+-	};
+-
+-	while (1) {
+-		static struct option opts[] = {
+-			{"alloc", no_argument, 0, 'a'},
+-			{"alloc_flags", required_argument, 0, 'f'},
+-			{"map", no_argument, 0, 'm'},
+-			{"custom", required_argument, 0, 'c'},
+-			{"len", required_argument, 0, 'l'},
+-			{"align", required_argument, 0, 'g'},
+-			{"map_flags", required_argument, 0, 'z'},
+-			{"prot", required_argument, 0, 'p'},
+-			{"alloc_tiler", no_argument, 0, 't'},
+-			{"width", required_argument, 0, 'w'},
+-			{"height", required_argument, 0, 'h'},
+-			{"fmt", required_argument, 0, 'r'},
+-			{"count", required_argument, 0, 'n'},
+-			{"iteration", required_argument, 0, 'i'},
+-		};
+-		int i = 0;
+-		c = getopt_long(argc, argv, "af:h:l:mr:stw:c:n:i:", opts, &i);
+-		if (c == -1)
+-			break;
+-
+-		switch (c) {
+-		case 'l':
+-			len = atol(optarg);
+-			break;
+-		case 'g':
+-			align = atol(optarg);
+-			break;
+-		case 'z':
+-			map_flags = 0;
+-			map_flags |= strstr(optarg, "PROT_EXEC") ?
+-				PROT_EXEC : 0;
+-			map_flags |= strstr(optarg, "PROT_READ") ?
+-				PROT_READ: 0;
+-			map_flags |= strstr(optarg, "PROT_WRITE") ?
+-				PROT_WRITE: 0;
+-			map_flags |= strstr(optarg, "PROT_NONE") ?
+-				PROT_NONE: 0;
+-			break;
+-		case 'p':
+-			prot = 0;
+-			prot |= strstr(optarg, "MAP_PRIVATE") ?
+-				MAP_PRIVATE	 : 0;
+-			prot |= strstr(optarg, "MAP_SHARED") ?
+-				MAP_PRIVATE	 : 0;
+-			break;
+-		case 'f':
+-			alloc_flags = atol(optarg);
+-			break;
+-		case 'a':
+-			test = ALLOC_TEST;
+-			break;
+-		case 'm':
+-			test = MAP_TEST;
+-			break;
+-		case 'c':
+-			test = CUSTOM_TEST;
+-			printf("KALP : Case 'c'\n");
+-			custom_test_num = atol(optarg);
+-			break;
+-		case 'r':
+-			fmt = atol(optarg);
+-			break;
+-		case 'w':
+-			width = atol(optarg);
+-			break;
+-		case 'h':
+-			height = atol(optarg);
+-			break;
+-		case 't':
+-			tiler_test = 1;
+-			break;
+-		case 'n':
+-			printf("KALP : Case 'n'\n");
+-			count = atol(optarg);
+-			break;
+-		case 'i':
+-			printf("KALP : Case 'i'\n");
+-			iteration = atol(optarg);
+-			break;
+-		}
+-	}
+-	printf("test %d, len %u, width %u, height %u, fmt %u, align %u, count %d, "
+-		   "iteration %d, map_flags %d, prot %d, alloc_flags %d\n", test, len, width,
+-		   height, fmt, align, count, iteration, map_flags, prot, alloc_flags);
+-
+-	switch (test) {
+-		case ALLOC_TEST:
+-			for(j = 0; j < iteration; j++) {
+-				ret = ion_alloc_test(count);
+-				if(ret) {
+-					printf("\nion alloc test: FAILED at iteration-%d\n", j+1);
+-					break;
+-				}
+-			}
+-			break;
+-
+-		case MAP_TEST:
+-			for(j = 0; j < iteration; j++) {
+-				ret = ion_map_test(count);
+-				if(ret) {
+-					printf("\nion map test: FAILED at iteration-%d\n", j+1);
+-					break;
+-				}
+-			}
+-			break;
+-
+-		case CUSTOM_TEST:
+-			ret = custom_test(custom_test_num);
+-			if(ret) {
+-				printf("\nion custom test #%d: FAILED\n", custom_test_num);
+-			}
+-			break;
+-
+-		default:
+-			printf("must specify a test (alloc, map, custom)\n");
+-	}
+-
+-	return 0;
+-}
+diff --git a/./system/core/libnl_2/socket.c b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libnl_2/socket.c
+index c2b4f08..d906cac 100644
+--- a/./system/core/libnl_2/socket.c
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/libnl_2/socket.c
+@@ -98,15 +98,6 @@ struct nl_sock *nl_socket_alloc_cb(struct nl_cb *cb)
+ 	return sk;
+ }
+ 
+-#ifdef OMAP_ENHANCEMENT
+-/* Callback Handler */
+-void nl_socket_set_cb(struct nl_sock *sk, struct nl_cb *cb)
+-{
+-	sk->s_cb = cb;
+-	nl_cb_get(cb);
+-}
+-#endif
+-
+ /* Free a netlink socket. */
+ void nl_socket_free(struct nl_sock *sk)
+ {
+diff --git a/./system/core/rootdir/init.rc b/home/DL/gdallolio/backup/Google-4.1.1/system/core/rootdir/init.rc
+index 87b5f70..e1371df 100644
+--- a/./system/core/rootdir/init.rc
++++ b/home/DL/gdallolio/backup/Google-4.1.1/system/core/rootdir/init.rc
+@@ -392,7 +392,7 @@ service ril-daemon /system/bin/rild
+     socket rild stream 660 root radio
+     socket rild-debug stream 660 radio system
+     user root
+-    group radio cache inet misc audio sdcard_r sdcard_rw log bluetooth
++    group radio cache inet misc audio sdcard_r sdcard_rw log
+ 
+ service surfaceflinger /system/bin/surfaceflinger
+     class main
+@@ -416,7 +416,7 @@ service drm /system/bin/drmserver
+ service media /system/bin/mediaserver
+     class main
+     user media
+-    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc bluetooth
++    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc
+     ioprio rt 4
+ 
+ service bootanim /system/bin/bootanimation

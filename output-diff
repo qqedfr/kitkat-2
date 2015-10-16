@@ -1,0 +1,425 @@
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bltsville.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bvblend.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bvbuffdesc.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bvcache.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bventry.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bverror.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bvfilter.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bvinternal.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: bvsurfgeom.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: caif
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: hsi_char.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux/ion.h and /home/DL/gdallolio/backup/Google-4.1.1//bionic/libc/kernel/common/linux/ion.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: ocd.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux: omapfb.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux/omap_ion.h and /home/DL/gdallolio/backup/Google-4.1.1//bionic/libc/kernel/common/linux/omap_ion.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux/rpmsg_omx.h and /home/DL/gdallolio/backup/Google-4.1.1//bionic/libc/kernel/common/linux/rpmsg_omx.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux/socket.h and /home/DL/gdallolio/backup/Google-4.1.1//bionic/libc/kernel/common/linux/socket.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/linux/usb_ch9.h and /home/DL/gdallolio/backup/Google-4.1.1//bionic/libc/kernel/common/linux/usb_ch9.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common: net
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/video/dsscomp.h and /home/DL/gdallolio/backup/Google-4.1.1//bionic/libc/kernel/common/video/dsscomp.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//bionic/libc/kernel/common/video: omap_hwc.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//device/ti: blaze
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//device/ti: blaze_tablet
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//device/ti: common-open
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//device/ti: omap5sevm
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//device/ti: panda5
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//device/ti: proprietary-open
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external: bltsville
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external: crda
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/dropbear/options.h and /home/DL/gdallolio/backup/Google-4.1.1//external/dropbear/options.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/jpeg/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//external/jpeg/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/jpeg/jdcolor.c and /home/DL/gdallolio/backup/Google-4.1.1//external/jpeg/jdcolor.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/jpeg: jdcolor-neon.S
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/jpeg/jdmerge.c and /home/DL/gdallolio/backup/Google-4.1.1//external/jpeg/jdmerge.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/jpeg: jdneon.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/jpeg: jidct-neon.S
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/jpeg: jidctvenum.c
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bltsville.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bvblend.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bvbuffdesc.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bvcache.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bventry.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bverror.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bvfilter.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bvinternal.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: bvsurfgeom.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: caif
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: hsi_char.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux/ion.h and /home/DL/gdallolio/backup/Google-4.1.1//external/kernel-headers/original/linux/ion.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux: ocd.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux/omap_ion.h and /home/DL/gdallolio/backup/Google-4.1.1//external/kernel-headers/original/linux/omap_ion.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux/socket.h and /home/DL/gdallolio/backup/Google-4.1.1//external/kernel-headers/original/linux/socket.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/linux/usb_ch9.h and /home/DL/gdallolio/backup/Google-4.1.1//external/kernel-headers/original/linux/usb_ch9.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original: net
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/video/dsscomp.h and /home/DL/gdallolio/backup/Google-4.1.1//external/kernel-headers/original/video/dsscomp.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/kernel-headers/original/video: omap_hwc.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/libxml2/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//external/libxml2/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/src/core/SkBlitter_ARGB32.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/src/core/SkBlitter_ARGB32.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/src/core/SkBlitter_RGB16.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/src/core/SkBlitter_RGB16.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/src/core/SkDraw.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/src/core/SkDraw.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/src/core/SkGraphics.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/src/core/SkGraphics.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/src/core/SkSpriteBlitter_ARGB32.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/src/core/SkSpriteBlitter_ARGB32.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/src/core/SkSpriteBlitter_RGB16.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/src/core/SkSpriteBlitter_RGB16.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/skia/src/images/SkJpegUtility.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/skia/src/images/SkJpegUtility.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/speex/libspeex/resample.c and /home/DL/gdallolio/backup/Google-4.1.1//external/speex/libspeex/resample.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/webkit/Source/WebCore/platform/graphics/skia/GradientSkia.cpp and /home/DL/gdallolio/backup/Google-4.1.1//external/webkit/Source/WebCore/platform/graphics/skia/GradientSkia.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/wpa_supplicant_8/hostapd/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//external/wpa_supplicant_8/hostapd/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/wpa_supplicant_8/hostapd/ctrl_iface.c and /home/DL/gdallolio/backup/Google-4.1.1//external/wpa_supplicant_8/hostapd/ctrl_iface.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant.c and /home/DL/gdallolio/backup/Google-4.1.1//external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//external: wpa_supplicant_8_ti
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/camera/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/camera/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/camera/Camera.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/camera/Camera.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/camera/ICameraClient.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/camera/ICameraClient.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/camera/ICamera.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/camera/ICamera.cpp differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/camera: ShotParameters.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/cmds/stagefright/stagefright.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/cmds/stagefright/stagefright.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/camera/Camera.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/camera/Camera.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/camera: CameraMetadata.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/camera/ICamera.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/camera/ICamera.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/camera: ShotParameters.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/IAudioFlinger.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/IAudioFlinger.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/MediaProfiles.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/MediaProfiles.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/stagefright/AudioPlayer.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/stagefright/AudioPlayer.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/stagefright/ColorConverter.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/stagefright/ColorConverter.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/stagefright/MediaDefs.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/stagefright/MediaDefs.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/stagefright/MediaSource.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/stagefright/MediaSource.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/stagefright/MetaData.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/stagefright/MetaData.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/stagefright/OMXCodec.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/stagefright/OMXCodec.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/include/media/stagefright/Utils.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/include/media/stagefright/Utils.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/libvideoeditor/lvpp/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/libvideoeditor/lvpp/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libmedia/IAudioFlinger.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libmedia/IAudioFlinger.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libmedia/MediaProfiles.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libmedia/MediaProfiles.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libmedia/mediarecorder.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libmedia/mediarecorder.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libmediaplayerservice/StagefrightRecorder.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libmediaplayerservice/StagefrightRecorder.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libmediaplayerservice/StagefrightRecorder.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libmediaplayerservice/StagefrightRecorder.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/AACExtractor.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/AACExtractor.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/ACodec.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/ACodec.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/Android.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright: APE.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright: ASFExtractor.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/AudioPlayer.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/AudioPlayer.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/AVIExtractor.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/AVIExtractor.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/AwesomePlayer.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/AwesomePlayer.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/CameraSource.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/CameraSource.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/colorconversion/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/colorconversion/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/colorconversion/ColorConverter.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/colorconversion/ColorConverter.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/DataSource.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/DataSource.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/httplive/LiveSession.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/httplive/LiveSession.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/id3/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/id3/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include/AACExtractor.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/include/AACExtractor.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include: APE.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include: ASFExtractor.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include/AVIExtractor.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/include/AVIExtractor.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include/AwesomePlayer.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/include/AwesomePlayer.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include/NuCachedSource2.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/include/NuCachedSource2.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include/SampleTable.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/include/SampleTable.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/include: TimeInterpolator.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/matroska/MatroskaExtractor.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/matroska/MatroskaExtractor.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/MediaDefs.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/MediaDefs.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/MediaExtractor.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/MediaExtractor.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/mpeg2ts/ATSParser.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/mpeg2ts/ATSParser.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/mpeg2ts/MPEG2TSExtractor.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/mpeg2ts/MPEG2TSExtractor.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/MPEG4Extractor.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/MPEG4Extractor.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/NuCachedSource2.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/NuCachedSource2.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/OMXCodec.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/OMXCodec.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/SampleTable.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/SampleTable.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/StagefrightMediaScanner.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/StagefrightMediaScanner.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/StagefrightMetadataRetriever.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/StagefrightMetadataRetriever.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright/timedtext/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/media/libstagefright/timedtext/Android.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/media/libstagefright: TimeInterpolator.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/audioflinger/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger/AudioFlinger.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/audioflinger/AudioFlinger.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger/AudioFlinger.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/audioflinger/AudioFlinger.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger/AudioPolicyService.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/audioflinger/AudioPolicyService.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger/AudioResampler.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/audioflinger/AudioResampler.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger/AudioResampler.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/audioflinger/AudioResampler.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger: AudioResamplerSpeex.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/audioflinger: AudioResamplerSpeex.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/camera/libcameraservice/CameraHardwareInterface.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/camera/libcameraservice/CameraHardwareInterface.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/camera/libcameraservice/CameraService.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/camera/libcameraservice/CameraService.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/av/services/camera/libcameraservice/CameraService.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/av/services/camera/libcameraservice/CameraService.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/cmds/am/src/com/android/commands/am/Am.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/cmds/am/src/com/android/commands/am/Am.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/core/java/android/os/Process.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/core/java/android/os/Process.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/core/java/android/os/SystemProperties.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/core/java/android/os/SystemProperties.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/core/java/android/server/BluetoothService.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/core/java/android/server/BluetoothService.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/core/java/android/view/Display.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/core/java/android/view/Display.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/core/java/android/widget/MediaController.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/core/java/android/widget/MediaController.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/core/jni/android_view_Display.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/core/jni/android_view_Display.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/media/java/android/media/AudioService.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/media/java/android/media/AudioService.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/media/java/android/media/AudioSystem.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/media/java/android/media/AudioSystem.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/media/java/android/media/DecoderCapabilities.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/media/java/android/media/DecoderCapabilities.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/media/java/android/media/MediaFile.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/media/java/android/media/MediaFile.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/media/java/android/media/MediaRecorder.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/media/java/android/media/MediaRecorder.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/media/jni/mediaeditor/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/media/jni/mediaeditor/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/packages/SystemUI/src/com/android/systemui/ImageWallpaper.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/packages/SystemUI/src/com/android/systemui/ImageWallpaper.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar/tablet/TabletStatusBar.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar/tablet/TabletStatusBar.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/services/java/com/android/server/pm/PackageManagerService.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/services/java/com/android/server/pm/PackageManagerService.java differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/services/java/com/android/server: SUPLLib
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/services/java/com/android/server/SystemServer.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/services/java/com/android/server/SystemServer.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/services/java/com/android/server/WallpaperManagerService.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/services/java/com/android/server/WallpaperManagerService.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/telephony/java/com/android/internal/telephony/CommandsInterface.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/telephony/java/com/android/internal/telephony/CommandsInterface.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/telephony/java/com/android/internal/telephony/PhoneBase.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/telephony/java/com/android/internal/telephony/PhoneBase.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/telephony/java/com/android/internal/telephony/Phone.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/telephony/java/com/android/internal/telephony/Phone.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/telephony/java/com/android/internal/telephony/PhoneProxy.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/telephony/java/com/android/internal/telephony/PhoneProxy.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/wifi/java/android/net/wifi/p2p/WifiP2pService.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/wifi/java/android/net/wifi/p2p/WifiP2pService.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/wifi/java/android/net/wifi/WifiStateMachine.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/wifi/java/android/net/wifi/WifiStateMachine.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/base/wifi/java/android/net/wifi/WifiWatchdogStateMachine.java and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/base/wifi/java/android/net/wifi/WifiWatchdogStateMachine.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/cmds/surfaceflinger/main_surfaceflinger.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/cmds/surfaceflinger/main_surfaceflinger.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/include/gui/BufferQueue.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/include/gui/BufferQueue.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/include/gui/ISurfaceTexture.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/include/gui/ISurfaceTexture.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/include/gui/SurfaceTextureClient.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/include/gui/SurfaceTextureClient.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/include/gui/SurfaceTexture.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/include/gui/SurfaceTexture.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/include/private/gui/SharedBufferStack.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/include/private/gui/SharedBufferStack.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/include/ui/DisplayInfo.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/include/ui/DisplayInfo.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/include/ui: S3DFormat.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/libs/gui/BufferQueue.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/libs/gui/BufferQueue.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/libs/gui/ISurfaceTexture.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/libs/gui/ISurfaceTexture.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/libs/gui/SurfaceComposerClient.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/libs/gui/SurfaceComposerClient.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/libs/gui/SurfaceTextureClient.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/libs/gui/SurfaceTextureClient.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/libs/gui/SurfaceTexture.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/libs/gui/SurfaceTexture.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/opengl/libs/EGL/Loader.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/opengl/libs/EGL/Loader.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/opengl/libs/EGL/Loader.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/opengl/libs/EGL/Loader.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/DisplayHardware/DisplayHardware.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/DisplayHardware/DisplayHardware.cpp differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/DisplayHardware: S3DHardware.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/DisplayHardware: S3DHardware.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/LayerBase.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/LayerBase.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/Layer.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/Layer.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/Layer.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/Layer.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/LayerScreenshot.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/LayerScreenshot.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/LayerScreenshot.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/LayerScreenshot.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger: OmapLayer.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger: OmapLayer.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger: OmapLayerScreenshot.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger: OmapLayerScreenshot.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger: S3DSurfaceFlinger.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger: S3DSurfaceFlinger.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/SurfaceFlinger.cpp and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/SurfaceFlinger.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//frameworks/native/services/surfaceflinger/SurfaceFlinger.h and /home/DL/gdallolio/backup/Google-4.1.1//frameworks/native/services/surfaceflinger/SurfaceFlinger.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware/hardware.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware/hardware.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware/include/hardware/audio.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware/include/hardware/audio.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware/include/hardware/audio_policy.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware/include/hardware/audio_policy.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware/include/hardware/camera.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware/include/hardware/camera.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/audio/AudioPolicyCompatClient.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/audio/AudioPolicyCompatClient.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/audio/AudioPolicyCompatClient.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/audio/AudioPolicyCompatClient.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/audio/AudioPolicyManagerBase.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/audio/AudioPolicyManagerBase.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/include/hardware_legacy/AudioPolicyInterface.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/include/hardware_legacy/AudioPolicyInterface.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/include/hardware_legacy/AudioPolicyManagerBase.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/include/hardware_legacy/AudioPolicyManagerBase.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/include/hardware_legacy/AudioSystemLegacy.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/include/hardware_legacy/AudioSystemLegacy.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy: nl80211.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/libhardware_legacy/wifi/wifi.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/libhardware_legacy/wifi/wifi.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti: domx
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx: android-api.mk
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/ANativeWindowDisplayAdapter.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/ANativeWindowDisplayAdapter.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/AppCallbackNotifier.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/AppCallbackNotifier.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/BaseCameraAdapter.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/BaseCameraAdapter.cpp differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera: BufferSourceAdapter.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/CameraHalCommon.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/CameraHalCommon.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/CameraHal.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/CameraHal.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/CameraHal_Module.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/CameraHal_Module.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/CameraHalUtilClasses.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/CameraHalUtilClasses.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/CameraParameters.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/CameraParameters.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/CameraProperties.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/CameraProperties.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/Encoder_libjpeg.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/Encoder_libjpeg.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/ANativeWindowDisplayAdapter.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/ANativeWindowDisplayAdapter.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/BaseCameraAdapter.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/BaseCameraAdapter.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc: BufferSourceAdapter.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/CameraHal.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/CameraHal.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/CameraProperties.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/CameraProperties.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc: Common.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/Encoder_libjpeg.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/Encoder_libjpeg.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/General3A_Settings.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/General3A_Settings.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/NV12_resize.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/NV12_resize.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/OMXCameraAdapter/OMXCameraAdapter.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/OMXCameraAdapter/OMXCameraAdapter.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/OMXCameraAdapter/OMXSceneModeTables.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/OMXCameraAdapter/OMXSceneModeTables.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/SensorListener.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/SensorListener.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/TICameraParameters.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/TICameraParameters.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/inc/V4LCameraAdapter/V4LCameraAdapter.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/inc/V4LCameraAdapter/V4LCameraAdapter.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/MemoryManager.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/MemoryManager.cpp differ
+Only in /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera: NV12_resize.c
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera: NV12_resize.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMX3A.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMX3A.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXAlgo.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXAlgo.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXCameraAdapter.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXCameraAdapter.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXCapabilities.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXCapabilities.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXCapture.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXCapture.cpp differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter: OMXDccDataSave.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXDefaults.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXDefaults.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXExif.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXExif.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXFD.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXFD.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXFocus.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXFocus.cpp differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter: OMXMetadata.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter: OMXReprocess.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXZoom.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/OMXCameraAdapter/OMXZoom.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/SensorListener.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/SensorListener.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/TICameraParameters.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/TICameraParameters.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/V4LCameraAdapter/V4LCameraAdapter.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/camera/V4LCameraAdapter/V4LCameraAdapter.cpp differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/camera/V4LCameraAdapter: V4LCapabilities.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx: common.mk
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx: cpcam
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/domx/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/domx/Android.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx: edid
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/hwc/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/hwc/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/hwc/hal_public.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/hwc/hal_public.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/hwc/hwc.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/hwc/hwc.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/hwc: rgz_2d.c
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/hwc: rgz_2d.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libI420colorconvert/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libI420colorconvert/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libstagefrighthw/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libstagefrighthw/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/Android.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils: DebugUtils.cpp
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/DebugUtils.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/DebugUtils.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/ErrorUtils.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/ErrorUtils.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/ErrorUtils.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/ErrorUtils.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/MessageQueue.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/MessageQueue.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/MessageQueue.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/MessageQueue.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/Semaphore.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/Semaphore.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils/Semaphore.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/libtiutils/Semaphore.h differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils: Status.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/libtiutils: UtilsCommon.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/omap4.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/omap4.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx: omap5.mk
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/smc_pa_ctrl/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/smc_pa_ctrl/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/smc_pa_ctrl/s_version.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/smc_pa_ctrl/s_version.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tee_client_api/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tee_client_api/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tee_client_api/schannel6_protocol.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tee_client_api/schannel6_protocol.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tee_client_api/s_version.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tee_client_api/s_version.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tee_client_api/tee_client_api_linux_driver.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tee_client_api/tee_client_api_linux_driver.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_crypto_sst/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_crypto_sst/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_crypto_sst/pkcs11_object.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_crypto_sst/pkcs11_object.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_crypto_sst/sst_stub.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_crypto_sst/sst_stub.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_daemon/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_daemon/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_daemon/delegation_client.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_daemon/delegation_client.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_daemon: lib_uuid.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_daemon/service_delegation_protocol.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_daemon/service_delegation_protocol.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_daemon/smc_properties.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_daemon/smc_properties.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_daemon/smc_properties_parser.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_daemon/smc_properties_parser.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_daemon/s_version.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_daemon/s_version.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/security/tf_sdk/include/s_type.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/security/tf_sdk/include/s_type.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/test/CameraHal/Android.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal: camera_test_bufferqueue.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal/camera_test.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/test/CameraHal/camera_test.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal/camera_test_menu.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/test/CameraHal/camera_test_menu.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal/camera_test_script.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/omap4xxx/test/CameraHal/camera_test_script.cpp differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal: camera_test_surfacetexture.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal: camera_test_surfacetexture.h
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test/CameraHal: surfacetexture_test.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test: libskiahw
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/omap4xxx/test: VTC
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/.gitignore and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/.gitignore differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211: compat_wl12xx
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211: compat_wl18xx
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/config/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/config/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/config/hostapd.conf and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/config/hostapd.conf differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/config: TQS_D_1.7_127x.ini
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/config: WLAN_Calibration_Script.sh
+Only in /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/config: wpa_supplicant.conf
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/calibrator.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/calibrator.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/calibrator.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/calibrator.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/ini.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/ini.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/ini_files/127x: RFMD_D_E5.ini
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/ini.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/ini.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/Makefile and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/Makefile differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/misc_cmds.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/misc_cmds.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/nvs.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/nvs.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/nvs.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/nvs.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/plt.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/plt.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/plt.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/plt.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils/README and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils/README differ
+Only in /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils: scripts
+Only in /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/ti-utils: uim_rfkill
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils: wl18xx_plt.c
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/ti-utils: wl18xx_plt.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/wpa_supplicant_lib/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/wpa_supplicant_lib/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/wpa_supplicant_lib/driver_mac80211_nl.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/wpa_supplicant_lib/driver_mac80211_nl.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wlan/mac80211/wpa_supplicant_lib/driver_nl80211.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wlan/mac80211/wpa_supplicant_lib/driver_nl80211.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/ti-wpan-products.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/ti-wpan-products.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/BluetoothSCOApp/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/BluetoothSCOApp/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/core/JFmRx.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/core/JFmRx.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/FmRadioIntent.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/FmRadioIntent.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/FmRadio.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/FmRadio.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/IFmConstants.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/IFmConstants.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/IFmRadio.aidl and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRadioIf/src/java/com/ti/fm/IFmRadio.aidl differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/AndroidManifest.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/AndroidManifest.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/btn_bgd_default.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/btn_bgd_default.png differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/btn_bgd_pressed.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/btn_bgd_pressed.png differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_mono.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_mono.png differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_seek_down.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_seek_down.png differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_seek_up.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_seek_up.png differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable: fm_start_comp_scan.png
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_stereo.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_stereo.png differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable: fm_stop_comp_scan.png
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_volume_mute.PNG and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_volume_mute.PNG differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_volume.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/fm_volume.png differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/poweron.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/poweron.png differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/seek_down_pressed.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/seek_down_pressed.png differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/seek_up_pressed.png and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable/seek_up_pressed.png differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/drawable: wallpaper8.png
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout: fmrxcompscan.xml
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxfreq.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxfreq.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxhelp.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxhelp.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxmain.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxmain.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxrdsconfig.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/fmrxrdsconfig.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/preset.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/layout/preset.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/values/strings.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/res/values/strings.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxAppConstants.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxAppConstants.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxApp.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxApp.java differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp: FmRxCompScan.java
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxFreqInput.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxFreqInput.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxRdsConfig.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/FmRxApp/src/com/ti/fmrxapp/FmRxRdsConfig.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/service/AndroidManifest.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/service/AndroidManifest.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/service/res/values/strings.xml and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/service/res/values/strings.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/service/src/java/com/ti/server/StubFmService.java and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/service/src/java/com/ti/server/StubFmService.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/service/src/jni/JFmRxNative.cpp and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/service/src/jni/JFmRxNative.cpp differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/service/src/jni/JFmRxNative.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/service/src/jni/JFmRxNative.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/FM/service/src/jni/v4l2_JbtlLog.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/FM/service/src/jni/v4l2_JbtlLog.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/kfmapp/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/kfmapp/Android.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/kfmapp: fm_mixer.h
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/kfmapp/kfmapp.c and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/kfmapp/kfmapp.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//hardware/ti/wpan/tools/kfmapp/kfmapp.h and /home/DL/gdallolio/backup/Google-4.1.1//hardware/ti/wpan/tools/kfmapp/kfmapp.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//libcore/luni/src/main/java/java/lang/System.java and /home/DL/gdallolio/backup/Google-4.1.1//libcore/luni/src/main/java/java/lang/System.java differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1/: output-diff
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/AndroidManifest.xml and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/AndroidManifest.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/res/menu/album.xml and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/res/menu/album.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/res/values/bool.xml and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/res/values/bool.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/res/values/strings.xml and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/res/values/strings.xml differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/AlbumPage.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/AlbumPage.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/MovieActivity.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/MovieActivity.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/MoviePlayer.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/MoviePlayer.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/PhotoPage.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Gallery2/src/com/android/gallery3d/app/PhotoPage.java differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps: OMAPCamera
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Settings/src/com/android/settings/deviceinfo/Memory.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Settings/src/com/android/settings/deviceinfo/Memory.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/SoundRecorder/AndroidManifest.xml and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/SoundRecorder/AndroidManifest.xml differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/SoundRecorder/res/values: arrays.xml
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/SoundRecorder/res/values/strings.xml and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/SoundRecorder/res/values/strings.xml differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/SoundRecorder/res: xml
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/SoundRecorder/src/com/android/soundrecorder/Recorder.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/SoundRecorder/src/com/android/soundrecorder/Recorder.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/SoundRecorder/src/com/android/soundrecorder/SoundRecorder.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/apps/SoundRecorder/src/com/android/soundrecorder/SoundRecorder.java differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/apps/SoundRecorder/src/com/android/soundrecorder: SoundRecorderSettings.java
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//packages/providers/MediaProvider/src/com/android/providers/media/MediaScannerService.java and /home/DL/gdallolio/backup/Google-4.1.1//packages/providers/MediaProvider/src/com/android/providers/media/MediaScannerService.java differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/adb/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//system/core/adb/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/adb/framebuffer_service.c and /home/DL/gdallolio/backup/Google-4.1.1//system/core/adb/framebuffer_service.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/adb/usb_linux.c and /home/DL/gdallolio/backup/Google-4.1.1//system/core/adb/usb_linux.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/fastboot/fastboot.c and /home/DL/gdallolio/backup/Google-4.1.1//system/core/fastboot/fastboot.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/include/ion/ion.h and /home/DL/gdallolio/backup/Google-4.1.1//system/core/include/ion/ion.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/include/private/android_filesystem_config.h and /home/DL/gdallolio/backup/Google-4.1.1//system/core/include/private/android_filesystem_config.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/include/system/audio.h and /home/DL/gdallolio/backup/Google-4.1.1//system/core/include/system/audio.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/include/system/camera.h and /home/DL/gdallolio/backup/Google-4.1.1//system/core/include/system/camera.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/include/system/window.h and /home/DL/gdallolio/backup/Google-4.1.1//system/core/include/system/window.h differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/init/devices.c and /home/DL/gdallolio/backup/Google-4.1.1//system/core/init/devices.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/libion/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//system/core/libion/Android.mk differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/libion/ion.c and /home/DL/gdallolio/backup/Google-4.1.1//system/core/libion/ion.c differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/libion: ion_test_2.c
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/libion/ion_test.c and /home/DL/gdallolio/backup/Google-4.1.1//system/core/libion/ion_test.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/libnl_2/socket.c and /home/DL/gdallolio/backup/Google-4.1.1//system/core/libnl_2/socket.c differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/core/rootdir/init.rc and /home/DL/gdallolio/backup/Google-4.1.1//system/core/rootdir/init.rc differ
+Files /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/netd/Android.mk and /home/DL/gdallolio/backup/Google-4.1.1//system/netd/Android.mk differ
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/netd: SoftapControllerTI.cpp
+Only in /home/DL/gdallolio/backup/OMAP-4AJ.1.1//system/netd: SoftapControllerTI.h
